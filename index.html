@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>feolhn.cn · 180k 实验室</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Lab navigation">
+        <header class="brand">
+          <button class="brand-mark" id="sidebarToggle" type="button" aria-label="收起侧边栏" aria-expanded="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div>
+            <strong>feolhn.cn</strong>
+            <small>个人实验室</small>
+          </div>
+        </header>
+
+        <div class="nav-heading">
+          <span>实验室系统</span>
+          <button class="icon-button" type="button" aria-label="命令面板">⌘</button>
+        </div>
+
+        <div class="sidebar-scroll">
+          <nav id="projectNav" class="project-nav"></nav>
+        </div>
+
+        <section class="lab-mode" aria-label="Lab mode">
+          <div class="mini-record" aria-hidden="true"><span></span></div>
+          <strong>策展模式</strong>
+          <p>整理、发布、复盘。让实验保持可见，让下一步保持明确。</p>
+        </section>
+
+        <footer class="sidebar-footer">
+          <button type="button" aria-label="设置">⚙</button>
+          <button type="button" aria-label="帮助">?</button>
+          <button id="themeToggle" type="button" aria-label="主题：跟随系统" title="主题：跟随系统">◐</button>
+        </footer>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div class="search">
+            <kbd>⌘</kbd><kbd>K</kbd>
+            <input id="searchInput" type="search" placeholder="搜索项目、笔记，或运行命令..." />
+          </div>
+          <div class="status-pill">
+            <span></span>
+            <div>
+              <strong>实验室状态</strong>
+              <small>所有系统正常</small>
+            </div>
+          </div>
+        </header>
+
+        <section class="shelf-panel" aria-labelledby="pageTitle">
+          <div class="shelf-titlebar">
+            <div>
+              <h1 id="pageTitle">唱片架</h1>
+              <p>整理 vibe coding、研究系统和 UI 实验项目。</p>
+            </div>
+            <div class="filters" role="group" aria-label="项目筛选">
+              <button class="filter active" type="button" data-filter="Featured">精选</button>
+              <button class="filter" type="button" data-filter="ThisMonth">本月更新</button>
+              <button class="filter" type="button" data-filter="LastMonth">上月更新</button>
+              <button class="filter" type="button" data-filter="Older">更久</button>
+            </div>
+          </div>
+
+          <div class="shelf-stage" aria-label="Project record shelf">
+            <div id="shelfRows" class="shelf-rows"></div>
+          </div>
+
+          <p class="shelf-tip">提示：选择一张项目唱片查看详情，入口链接保留在右侧面板。</p>
+        </section>
+      </main>
+
+      <aside class="inspector" aria-label="Project inspector">
+        <div class="inspector-card">
+          <div class="project-kicker">
+            <span id="detailStatusDot"></span>
+            <span id="detailStatus"></span>
+            <span id="detailCategory"></span>
+          </div>
+          <h2 id="detailTitle"></h2>
+
+          <section>
+            <h3>用途</h3>
+            <p id="detailPurpose"></p>
+          </section>
+
+          <section>
+            <h3>技术栈</h3>
+            <div id="detailStack" class="tag-list"></div>
+          </section>
+
+          <section>
+            <h3>最近更新</h3>
+            <p id="detailUpdate" class="muted"></p>
+          </section>
+
+          <section>
+            <h3>入口链接</h3>
+            <div class="entry-links">
+              <a id="openLink" href="#" target="_blank" rel="noreferrer">打开</a>
+              <a id="notesLink" href="#" target="_blank" rel="noreferrer">笔记</a>
+              <a id="sourceLink" href="#" target="_blank" rel="noreferrer">源码</a>
+            </div>
+          </section>
+
+          <section>
+            <h3>预览</h3>
+            <div id="detailPreview" class="preview-card"></div>
+          </section>
+
+          <section>
+            <h3>笔记 / 下一步</h3>
+            <p id="detailNext" class="next-step"></p>
+          </section>
+        </div>
+      </aside>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
