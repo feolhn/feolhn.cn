@@ -558,24 +558,23 @@ h1 {
   min-height: 210px;
   border: 1px solid rgba(0, 0, 0, 0.18);
   border-radius: 5px;
-  background: var(--cover-bg, #222);
-  color: var(--cover-ink, #fff);
+  background-image:
+    linear-gradient(180deg, rgba(10, 10, 8, 0.18), rgba(10, 10, 8, 0.36)),
+    url("./assets/covers/cover-library.png");
+  background-position:
+    center,
+    var(--cover-x, 0%) var(--cover-y, 0%);
+  background-size:
+    100% 100%,
+    500% 600%;
+  color: #fff8e8;
   box-shadow: 8px 8px 0 rgba(22, 22, 20, 0.16), 0 16px 24px rgba(42, 34, 22, 0.18);
   cursor: pointer;
   padding: 20px 18px 16px;
   text-align: left;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.38);
   transform: translateY(0);
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
-}
-
-.record::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 5px;
-  background: var(--cover-pattern);
-  opacity: 0.82;
-  pointer-events: none;
 }
 
 .record::after {
@@ -724,53 +723,15 @@ h1 {
 }
 
 .preview-card {
+  display: grid;
   min-height: 184px;
   border-radius: 8px;
-  background: #121817;
-  color: #e6ece5;
-  overflow: hidden;
-  padding: 14px;
-}
-
-.preview-head {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 16px;
-  color: #a8b5ad;
-  font-size: 11px;
-}
-
-.preview-graph {
-  height: 90px;
-  border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: 6px;
-  background:
-    linear-gradient(135deg, transparent 0 20%, rgba(210, 147, 34, 0.28) 21% 23%, transparent 24% 100%),
-    linear-gradient(25deg, transparent 0 35%, rgba(76, 154, 106, 0.36) 36% 38%, transparent 39% 100%),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 32px),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.05) 0 1px, transparent 1px 28px);
-}
-
-.preview-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-  margin-top: 10px;
-}
-
-.preview-metrics span {
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 0.07);
-  padding: 8px;
-  color: #b8c4bd;
-  font-size: 11px;
-}
-
-.preview-metrics strong {
-  display: block;
-  margin-top: 3px;
-  color: #fff;
-  font-size: 18px;
+  place-items: center;
+  border: 1px dashed var(--line);
+  background: color-mix(in srgb, var(--panel) 82%, var(--bg));
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0;
 }
 
 .next-step {
