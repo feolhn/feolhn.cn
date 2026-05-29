@@ -7,7 +7,7 @@ Static personal lab dashboard for collecting vibe coding, research, and UI exper
 - `index.html`: app shell
 - `styles.css`: layout, shelf UI, theme modes
 - `script.js`: project data, filtering, sidebar and theme interactions
-- `assets/covers/`: generated record-cover sprite sheet
+- `assets/covers/`: generated square WebP record covers
 
 ## Deploy
 

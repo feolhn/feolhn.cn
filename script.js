@@ -1,5 +1,3 @@
-const coverGrid = { columns: 5, rows: 6 };
-
 const categories = [
   {
     name: "Frontier Tiles",
@@ -15,7 +13,7 @@ const categories = [
         update: "已注册，等待最终预览确认后发布。",
         next: "加入 HY OAS 期限结构斜率作为早期预警，并回测与权益回撤的关系。",
         links: ["#", "#", "#"],
-        coverIndex: 0
+        cover: 3
       },
       {
         id: "a-share-hot-stock",
@@ -28,7 +26,7 @@ const categories = [
         update: "预览、压力状态、payload 和发布脚本已就位。",
         next: "保留源码提交，只在发布快照时重新生成 dist。",
         links: ["#", "#", "#"],
-        coverIndex: 1
+        cover: 1
       },
       {
         id: "us-ai-basket",
@@ -41,7 +39,7 @@ const categories = [
         update: "围绕本地股票篮子和 yfinance 采集器搭建。",
         next: "加入财报日历叠层和相对强弱热力图。",
         links: ["#", "#", "#"],
-        coverIndex: 2
+        cover: 2
       },
       {
         id: "mega-cap",
@@ -54,7 +52,7 @@ const categories = [
         update: "已作为 ECharts 模板 tile 在 Frontier 中上线。",
         next: "保持 ECharts 运行时为模板模式，不把图表库内联进 rendered HTML。",
         links: ["#", "#", "#"],
-        coverIndex: 3
+        cover: 4
       },
       {
         id: "chinese-tech",
@@ -67,7 +65,7 @@ const categories = [
         update: "已发布，并作为信号分类和状态标注的参考实现保留。",
         next: "复用其信号 taxonomy 和状态标签模式。",
         links: ["#", "#", "#"],
-        coverIndex: 4
+        cover: 6
       },
       {
         id: "podcast-digest",
@@ -80,7 +78,7 @@ const categories = [
         update: "QA、压力状态和暗色模式改动已提交。",
         next: "只有新增节目时才重新生成构建输出。",
         links: ["#", "#", "#"],
-        coverIndex: 5
+        cover: 7
       },
       {
         id: "benchmark-radar",
@@ -93,7 +91,7 @@ const categories = [
         update: "作为 tile-lab 工作流质量门禁的参考样本保留。",
         next: "发布新 tile 前，把它作为已知良好的对照样本。",
         links: ["#", "#", "#"],
-        coverIndex: 6
+        cover: 8
       },
       {
         id: "market-map",
@@ -106,7 +104,7 @@ const categories = [
         update: "因平台不允许外部脚本嵌入而受阻。",
         next: "作为阻塞证据保留，不直接发布 widget-preview。",
         links: ["#", "#", "#"],
-        coverIndex: 7
+        cover: 9
       }
     ]
   },
@@ -124,7 +122,7 @@ const categories = [
         update: "包含方向归档、静态素材和可分发页面。",
         next: "把最强的布局 motif 抽成可复用站点组件。",
         links: ["#", "#", "#"],
-        coverIndex: 8
+        cover: 11
       },
       {
         id: "image-lab",
@@ -137,7 +135,7 @@ const categories = [
         update: "current UI、experiments、gallery、references、scripts 和 skills 已拆分。",
         next: "把唱片封套作为实验项目的可复用视觉语言。",
         links: ["#", "#", "#"],
-        coverIndex: 9
+        cover: 12
       },
       {
         id: "infinite-canvas",
@@ -150,7 +148,7 @@ const categories = [
         update: "已接入 Vercel，源码结构较聚焦。",
         next: "把项目预览做得更像空间画布，而不是普通 dashboard。",
         links: ["#", "#", "#"],
-        coverIndex: 10
+        cover: 14
       },
       {
         id: "logo-motion",
@@ -163,7 +161,7 @@ const categories = [
         update: "output、public、site 和 source 目录已分开。",
         next: "挑选最好的动效静帧作为唱片封面。",
         links: ["#", "#", "#"],
-        coverIndex: 11
+        cover: 15
       }
     ]
   },
@@ -181,7 +179,7 @@ const categories = [
         update: "app、docs、lib、output 和 public 目录已就位。",
         next: "给每组生成图加入结构化 review 元数据。",
         links: ["#", "#", "#"],
-        coverIndex: 12
+        cover: 13
       },
       {
         id: "llm-wiki",
@@ -194,7 +192,7 @@ const categories = [
         update: "artifacts、config、docs、handoff、runs、scripts、tools 和 wiki 已拆分。",
         next: "明确 source sufficiency，让 ingest run 更容易检查。",
         links: ["#", "#", "#"],
-        coverIndex: 13
+        cover: 18
       },
       {
         id: "wiki-deck",
@@ -207,7 +205,7 @@ const categories = [
         update: "dist 输出是当前主要工作 artifact。",
         next: "作为未来 presentation export 的参考。",
         links: ["#", "#", "#"],
-        coverIndex: 14
+        cover: 10
       }
     ]
   },
@@ -225,7 +223,7 @@ const categories = [
         update: "runs 已包含 profile review dashboard 和 growth profile data。",
         next: "把私有 raw exports 和公开项目描述严格分离。",
         links: ["#", "#", "#"],
-        coverIndex: 15
+        cover: 19
       },
       {
         id: "rss-system",
@@ -238,7 +236,7 @@ const categories = [
         update: "优先官方 RSS，其次稳定网页，再考虑私有 RSSHub。",
         next: "只把通过测试的信息源推进 MVP ingest 主链路。",
         links: ["#", "#", "#"],
-        coverIndex: 16
+        cover: 17
       }
     ]
   }
@@ -316,11 +314,7 @@ function statusClass(status) {
 }
 
 function coverVars(index) {
-  const column = index % coverGrid.columns;
-  const row = Math.floor(index / coverGrid.columns);
-  const x = coverGrid.columns === 1 ? 0 : (column / (coverGrid.columns - 1)) * 100;
-  const y = coverGrid.rows === 1 ? 0 : (row / (coverGrid.rows - 1)) * 100;
-  return `--cover-x:${x}%;--cover-y:${y}%`;
+  return `--cover-image:url("./assets/covers/cover-${String(index).padStart(2, "0")}.webp")`;
 }
 
 function filteredProjects(projects) {
@@ -378,7 +372,7 @@ function renderShelf() {
               ${row
                 .map(
                   (project) => `
-                    <button class="record ${project.id === selectedId ? "active" : ""}" type="button" data-project="${project.id}" style="${coverVars(project.coverIndex)}">
+                    <button class="record ${project.id === selectedId ? "active" : ""}" type="button" data-project="${project.id}" style='${coverVars(project.cover)}'>
                       <span>
                         <h2>${project.name}</h2>
                         <small>${project.summary}</small>

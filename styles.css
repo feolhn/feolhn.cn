@@ -530,8 +530,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(152px, 1fr));
   gap: 22px 18px;
-  align-items: end;
-  min-height: 224px;
+  align-items: start;
   padding: 0 10px 24px;
 }
 
@@ -555,18 +554,18 @@ h1 {
   position: relative;
   display: grid;
   align-content: space-between;
-  min-height: 210px;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
   border: 1px solid rgba(0, 0, 0, 0.18);
   border-radius: 5px;
   background-image:
     linear-gradient(180deg, rgba(10, 10, 8, 0.18), rgba(10, 10, 8, 0.36)),
-    url("./assets/covers/cover-library.png");
-  background-position:
-    center,
-    var(--cover-x, 0%) var(--cover-y, 0%);
+    var(--cover-image);
+  background-position: center;
   background-size:
     100% 100%,
-    500% 600%;
+    cover;
+  background-repeat: no-repeat;
   color: #fff8e8;
   box-shadow: 8px 8px 0 rgba(22, 22, 20, 0.16), 0 16px 24px rgba(42, 34, 22, 0.18);
   cursor: pointer;
@@ -802,6 +801,5 @@ h1 {
 
   .shelf-row {
     grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
-    min-height: 210px;
   }
 }
