@@ -87,12 +87,12 @@ const categories = [
     projects: [
       {
         id: "html-mocks",
-        name: "frontier html mocks",
+        name: "Frontier UI Mocks",
         status: "Active",
         version: "v0.9",
-        summary: "探索 Frontier UI 组合",
+        summary: "frontier APP前端草稿及对比",
         purpose: "探索 Frontier UI 组合方式和可分享的 HTML mockup。",
-        stack: ["HTML", "CSS", "Netlify", "Assets"],
+        stack: ["HTML", "CSS", "Cloudflare Pages", "Assets"],
         update: "已从 Netlify 迁移到 Cloudflare Pages，入口域名为 ui-mocks.feolhn.cn。",
         next: "后续主流程：本地改前端，运行 npm run build，提交并 push GitHub，由 Cloudflare Pages 发布。",
         links: ["https://ui-mocks.feolhn.cn/", "#", "https://github.com/feolhn/frontier-html-mocks"],
@@ -235,30 +235,24 @@ const statusLabels = {
 };
 
 const projectGroups = {
-  Featured: [
+  Featured: ["html-mocks"],
+  ThisMonth: ["html-mocks"],
+  LastMonth: [],
+  Older: [
     "credit-risk",
     "a-share-hot-stock",
     "us-ai-basket",
     "mega-cap",
     "chinese-tech",
     "podcast-digest",
-    "html-mocks",
     "image-lab",
     "infinite-canvas",
-    "rss-system"
-  ],
-  ThisMonth: [
-    "credit-risk",
-    "a-share-hot-stock",
-    "us-ai-basket",
-    "html-mocks",
-    "image-lab",
-    "infinite-canvas",
+    "logo-motion",
+    "image-output",
+    "wiki-deck",
     "frontier-profile",
     "rss-system"
-  ],
-  LastMonth: ["mega-cap", "chinese-tech", "podcast-digest", "logo-motion", "image-output"],
-  Older: ["wiki-deck"]
+  ]
 };
 
 function categoryLabel(name) {
