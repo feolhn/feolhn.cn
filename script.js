@@ -116,7 +116,7 @@ const categories = [
         name: "frontier infinite canvas",
         status: "Active",
         version: "v0.8",
-        summary: "空间化组织 Frontier artifact",
+        summary: "frontier的无限画布",
         purpose: "原型化一个用于排列 Frontier artifact 的空间思考画布。",
         stack: ["React", "Vercel", "Canvas"],
         update: "已接入 Vercel，生产域名已改为 infinite-canvas.feolhn.cn。",
@@ -235,7 +235,7 @@ const statusLabels = {
 };
 
 const projectGroups = {
-  Featured: ["html-mocks", "image-output"],
+  Featured: ["html-mocks", "image-output", "infinite-canvas"],
   ThisMonth: ["html-mocks"],
   LastMonth: [],
   Older: [
@@ -353,15 +353,12 @@ function renderDetail() {
   document.querySelector("#detailCategory").textContent = categoryLabel(project.category);
   document.querySelector("#detailPurpose").textContent = project.purpose;
   document.querySelector("#detailUpdate").textContent = project.update;
-  document.querySelector("#detailNext").textContent = project.next;
   document.querySelector("#detailStatusDot").className = `dot ${statusClass(project.status)}`;
 
   document.querySelector("#detailStack").innerHTML = project.stack.map((tag) => `<span>${tag}</span>`).join("");
 
-  const [open, notes, source] = project.links;
+  const [open] = project.links;
   document.querySelector("#openLink").href = open;
-  document.querySelector("#notesLink").href = notes;
-  document.querySelector("#sourceLink").href = source;
 
   document.querySelector("#detailPreview").innerHTML = `
     <span>待开发</span>
