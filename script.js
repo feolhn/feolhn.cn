@@ -93,9 +93,9 @@ const categories = [
         summary: "探索 Frontier UI 组合",
         purpose: "探索 Frontier UI 组合方式和可分享的 HTML mockup。",
         stack: ["HTML", "CSS", "Netlify", "Assets"],
-        update: "当前在 Netlify，静态构建产物是 dist-share，适合迁到 Cloudflare Pages。",
-        next: "进入 /Users/hujiawei/Documents/180k/ui-labs/frontier-html-mocks，运行 npm run build 后用 Cloudflare Pages 连接 GitHub 仓库。",
-        links: ["https://frontier-html-mocks.netlify.app/", "#", "https://github.com/feolhn/frontier-html-mocks"],
+        update: "已从 Netlify 迁移到 Cloudflare Pages，入口域名为 ui-mocks.feolhn.cn。",
+        next: "后续主流程：本地改前端，运行 npm run build，提交并 push GitHub，由 Cloudflare Pages 发布。",
+        links: ["https://ui-mocks.feolhn.cn/", "#", "https://github.com/feolhn/frontier-html-mocks"],
         cover: 11
       },
       {
