@@ -119,9 +119,9 @@ const categories = [
         summary: "空间化组织 Frontier artifact",
         purpose: "原型化一个用于排列 Frontier artifact 的空间思考画布。",
         stack: ["React", "Vercel", "Canvas"],
-        update: "已接入 Vercel，使用 Next + Liveblocks + tldraw，暂时不迁移。",
-        next: "进入 /Users/hujiawei/Documents/180k/ui-labs/frontier-infinite-canvas，只做域名或主页入口维护，不切 Cloudflare。",
-        links: ["https://frontier-board-lab.vercel.app/", "#", "https://github.com/feolhn/frontier-board-lab"],
+        update: "已接入 Vercel，生产域名已改为 infinite-canvas.feolhn.cn。",
+        next: "进入 /Users/hujiawei/Documents/180k/ui-labs/frontier-infinite-canvas，继续维护 Vercel 部署和自定义域名。",
+        links: ["https://infinite-canvas.feolhn.cn/", "#", "https://github.com/feolhn/frontier-board-lab"],
         cover: 14
       },
       {
