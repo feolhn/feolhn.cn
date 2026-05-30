@@ -10,9 +10,9 @@ const categories = [
         summary: "追踪信用压力是否领先恶化",
         purpose: "在权益市场反应之前，识别信用压力是否正在恶化。",
         stack: ["FRED", "TypeScript", "ECharts", "Frontier"],
-        update: "已注册，等待最终预览确认后发布。",
-        next: "加入 HY OAS 期限结构斜率作为早期预警，并回测与权益回撤的关系。",
-        links: ["#", "#", "#"],
+        update: "本地 tile 项目保留，后续适合迁到 Cloudflare Worker 定时刷新链路。",
+        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-credit-market-risk-light，评估 Worker Cron + KV/R2 latest snapshot 发布方式。",
+        links: ["https://tile.okfrontier.com/preview/97ba60aaa9b455fe", "#", "#"],
         cover: 3
       },
       {
@@ -23,8 +23,8 @@ const categories = [
         summary: "用雷达视图观察 A 股热度",
         purpose: "用紧凑的市场信号雷达追踪 A 股热门股票动量。",
         stack: ["Sina", "TypeScript", "ECharts", "Publisher"],
-        update: "预览、压力状态、payload 和发布脚本已就位。",
-        next: "保留源码提交，只在发布快照时重新生成 dist。",
+        update: "预览、压力状态、payload 和发布脚本已就位，后续适合 Cloudflare 定时刷新。",
+        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-a-share-hot-stock-radar，整理数据源 fetch 边界，再迁 Worker Cron。",
         links: ["#", "#", "#"],
         cover: 1
       },
@@ -36,8 +36,8 @@ const categories = [
         summary: "跟踪美股 AI 供应链篮子",
         purpose: "监控美股 AI 供应链股票篮子的表现、分化与相对强弱。",
         stack: ["yfinance", "TypeScript", "ECharts", "Node"],
-        update: "围绕本地股票篮子和 yfinance 采集器搭建。",
-        next: "加入财报日历叠层和相对强弱热力图。",
+        update: "围绕本地股票篮子和 yfinance 采集器搭建，后续适合迁到 Cloudflare 定时刷新。",
+        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-us-ai-basket-monitor，先确认 yfinance 采集能否在 Worker 环境替换或拆到外部刷新器。",
         links: ["#", "#", "#"],
         cover: 2
       },
@@ -49,8 +49,8 @@ const categories = [
         summary: "观察巨头集中度和等权背离",
         purpose: "把超大市值公司集中度和等权指数背离作为市场风险信号展示。",
         stack: ["yfinance", "ECharts", "Frontier Runtime"],
-        update: "已作为 ECharts 模板 tile 在 Frontier 中上线。",
-        next: "保持 ECharts 运行时为模板模式，不把图表库内联进 rendered HTML。",
+        update: "已作为 ECharts 模板 tile 在 Frontier 中上线，后续可迁移刷新器。",
+        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-mega-cap-concentration，保持 ECharts 运行时为模板模式，再设计 Cloudflare 定时刷新。",
         links: ["#", "#", "#"],
         cover: 4
       },
@@ -62,8 +62,8 @@ const categories = [
         summary: "整理中国科技与商业信号",
         purpose: "把中国科技和商业信号整理成紧凑的市场观察卡组。",
         stack: ["Data scripts", "TypeScript", "Signals"],
-        update: "已发布，并作为信号分类和状态标注的参考实现保留。",
-        next: "复用其信号 taxonomy 和状态标签模式。",
+        update: "已发布，并作为信号分类和状态标注的参考实现保留；后续适合 Cloudflare 统一调度。",
+        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-chinese-tech-radar，保留 signal taxonomy，迁移 RSS/LLM 刷新流程。",
         links: ["#", "#", "#"],
         cover: 6
       },
@@ -75,36 +75,10 @@ const categories = [
         summary: "把播客对话压缩成摘要卡",
         purpose: "把播客长对话压缩成可读、可回看的 Frontier artifact。",
         stack: ["Transcript", "QA", "Dark mode"],
-        update: "QA、压力状态和暗色模式改动已提交。",
-        next: "只有新增节目时才重新生成构建输出。",
+        update: "QA、压力状态和暗色模式改动已提交，后续适合 Cloudflare 定时刷新。",
+        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-podcast-digest，确认 RSSHub 与 LLM key 边界，再迁 Worker Cron。",
         links: ["#", "#", "#"],
         cover: 7
-      },
-      {
-        id: "benchmark-radar",
-        name: "benchmark radar",
-        status: "Baseline",
-        version: "v1.2",
-        summary: "AI 模型雷达和发布基准",
-        purpose: "作为 AI 模型雷达和 publisher 工作流的基准探针。",
-        stack: ["Benchmarks", "TypeScript", "Payload QA"],
-        update: "作为 tile-lab 工作流质量门禁的参考样本保留。",
-        next: "发布新 tile 前，把它作为已知良好的对照样本。",
-        links: ["#", "#", "#"],
-        cover: 8
-      },
-      {
-        id: "market-map",
-        name: "market map",
-        status: "Blocked",
-        version: "v0.4",
-        summary: "外部组件版全球市场热图",
-        purpose: "基于外部组件原型化全球市场热力图。",
-        stack: ["TradingView", "HTML", "Preview"],
-        update: "因平台不允许外部脚本嵌入而受阻。",
-        next: "作为阻塞证据保留，不直接发布 widget-preview。",
-        links: ["#", "#", "#"],
-        cover: 9
       }
     ]
   },
@@ -119,9 +93,9 @@ const categories = [
         summary: "探索 Frontier UI 组合",
         purpose: "探索 Frontier UI 组合方式和可分享的 HTML mockup。",
         stack: ["HTML", "CSS", "Netlify", "Assets"],
-        update: "包含方向归档、静态素材和可分发页面。",
-        next: "把最强的布局 motif 抽成可复用站点组件。",
-        links: ["#", "#", "#"],
+        update: "当前在 Netlify，静态构建产物是 dist-share，适合迁到 Cloudflare Pages。",
+        next: "进入 /Users/hujiawei/Documents/180k/ui-labs/frontier-html-mocks，运行 npm run build 后用 Cloudflare Pages 连接 GitHub 仓库。",
+        links: ["https://frontier-html-mocks.netlify.app/", "#", "https://github.com/feolhn/frontier-html-mocks"],
         cover: 11
       },
       {
@@ -145,9 +119,9 @@ const categories = [
         summary: "空间化组织 Frontier artifact",
         purpose: "原型化一个用于排列 Frontier artifact 的空间思考画布。",
         stack: ["React", "Vercel", "Canvas"],
-        update: "已接入 Vercel，源码结构较聚焦。",
-        next: "把项目预览做得更像空间画布，而不是普通 dashboard。",
-        links: ["#", "#", "#"],
+        update: "已接入 Vercel，使用 Next + Liveblocks + tldraw，暂时不迁移。",
+        next: "进入 /Users/hujiawei/Documents/180k/ui-labs/frontier-infinite-canvas，只做域名或主页入口维护，不切 Cloudflare。",
+        links: ["https://frontier-board-lab.vercel.app/", "#", "https://github.com/feolhn/frontier-board-lab"],
         cover: 14
       },
       {
@@ -176,23 +150,10 @@ const categories = [
         summary: "测试 LLM 视觉输出管线",
         purpose: "测试 LLM 视觉输出管线，并比较不同生成图像 artifact。",
         stack: ["Next.js", "Vercel", "Image workflow"],
-        update: "app、docs、lib、output 和 public 目录已就位。",
-        next: "给每组生成图加入结构化 review 元数据。",
-        links: ["#", "#", "#"],
+        update: "当前在 Vercel，依赖 Next API Routes、Vercel Blob 和 Redis/KV，暂时不迁移。",
+        next: "进入 /Users/hujiawei/Documents/180k/llm-tools/image-output-lab，继续维护 Vercel 环境变量和生产域名。",
+        links: ["https://prompt-lab-peach.vercel.app/", "#", "https://github.com/feolhn/prompt-lab"],
         cover: 13
-      },
-      {
-        id: "llm-wiki",
-        name: "llm wiki",
-        status: "Active",
-        version: "v0.6",
-        summary: "维护 LLM 辅助 wiki",
-        purpose: "维护一个包含 ingest、runs、tools 和 handoff artifact 的 LLM 辅助 wiki。",
-        stack: ["Streamlit", "Scripts", "Wiki", "Runs"],
-        update: "artifacts、config、docs、handoff、runs、scripts、tools 和 wiki 已拆分。",
-        next: "明确 source sufficiency，让 ingest run 更容易检查。",
-        links: ["#", "#", "#"],
-        cover: 18
       },
       {
         id: "wiki-deck",
@@ -281,7 +242,6 @@ const projectGroups = {
     "mega-cap",
     "chinese-tech",
     "podcast-digest",
-    "benchmark-radar",
     "html-mocks",
     "image-lab",
     "infinite-canvas",
@@ -297,8 +257,8 @@ const projectGroups = {
     "frontier-profile",
     "rss-system"
   ],
-  LastMonth: ["mega-cap", "chinese-tech", "podcast-digest", "benchmark-radar", "logo-motion", "image-output", "llm-wiki"],
-  Older: ["market-map", "wiki-deck"]
+  LastMonth: ["mega-cap", "chinese-tech", "podcast-digest", "logo-motion", "image-output"],
+  Older: ["wiki-deck"]
 };
 
 function categoryLabel(name) {
