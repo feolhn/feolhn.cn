@@ -150,9 +150,9 @@ const categories = [
         summary: "测试 LLM 视觉输出管线",
         purpose: "测试 LLM 视觉输出管线，并比较不同生成图像 artifact。",
         stack: ["Next.js", "Vercel", "Image workflow"],
-        update: "当前在 Vercel，依赖 Next API Routes、Vercel Blob 和 Redis/KV，暂时不迁移。",
-        next: "进入 /Users/hujiawei/Documents/180k/llm-tools/image-output-lab，继续维护 Vercel 环境变量和生产域名。",
-        links: ["https://prompt-lab-peach.vercel.app/", "#", "https://github.com/feolhn/prompt-lab"],
+        update: "当前在 Vercel，生产域名已改为 info-to-image.feolhn.cn。",
+        next: "进入 /Users/hujiawei/Documents/180k/llm-tools/image-output-lab，继续维护 Vercel 环境变量和自定义域名。",
+        links: ["https://info-to-image.feolhn.cn/", "#", "https://github.com/feolhn/prompt-lab"],
         cover: 13
       },
       {
@@ -235,7 +235,7 @@ const statusLabels = {
 };
 
 const projectGroups = {
-  Featured: ["html-mocks"],
+  Featured: ["html-mocks", "image-output"],
   ThisMonth: ["html-mocks"],
   LastMonth: [],
   Older: [
