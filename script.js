@@ -3,6 +3,19 @@ const categories = [
     name: "Frontier Tiles",
     projects: [
       {
+        id: "epoch-compute-supply",
+        name: "Epoch Compute Supply",
+        status: "Published",
+        version: "v0.1",
+        summary: "追踪 AI 算力供给信号",
+        purpose: "把 Epoch 相关算力供给、模型训练资源和产业节奏整理成 Frontier tile。",
+        stack: ["Frontier", "Compute", "AI"],
+        update: "已注册到 Frontier，tile_id 为 da3a8bb7c206a501。",
+        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-epoch-compute-supply，确认 webhook 数据推送和定时刷新链路。",
+        links: ["https://tile.okfrontier.com/preview/da3a8bb7c206a501", "#", "#"],
+        cover: 5
+      },
+      {
         id: "ipo-action-card",
         name: "IPO Action Card",
         status: "Published",
@@ -261,10 +274,22 @@ const statusLabels = {
 };
 
 const projectGroups = {
-  Featured: ["html-mocks", "image-output", "infinite-canvas", "us-ai-basket"],
+  Featured: [
+    "html-mocks",
+    "image-output",
+    "infinite-canvas",
+    "us-ai-basket",
+    "epoch-compute-supply",
+    "ipo-action-card",
+    "memory-price-cycle",
+    "fed-rates-oil-pressure",
+    "credit-risk",
+    "image-lab"
+  ],
   ThisMonth: ["html-mocks"],
   LastMonth: [],
   Older: [
+    "epoch-compute-supply",
     "ipo-action-card",
     "memory-price-cycle",
     "fed-rates-oil-pressure",
