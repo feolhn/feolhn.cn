@@ -93,9 +93,9 @@ const categories = [
         summary: "frontier APP前端草稿及对比",
         purpose: "探索 Frontier UI 组合方式和可分享的 HTML mockup。",
         stack: ["HTML", "CSS", "Cloudflare Pages", "Assets"],
-        update: "已从 Netlify 迁移到 Cloudflare Pages，入口域名为 ui-mocks.feolhn.cn。",
+        update: "已从 Netlify 迁移到 Cloudflare Pages，并接入 Cloudflare Access 私有域名 ui-mocks.lab.feolhn.cn。",
         next: "后续主流程：本地改前端，运行 npm run build，提交并 push GitHub，由 Cloudflare Pages 发布。",
-        links: ["https://ui-mocks.feolhn.cn/", "#", "https://github.com/feolhn/frontier-html-mocks"],
+        links: ["https://ui-mocks.lab.feolhn.cn/", "#", "https://github.com/feolhn/frontier-html-mocks"],
         cover: 11
       },
       {
@@ -119,9 +119,9 @@ const categories = [
         summary: "frontier的无限画布",
         purpose: "原型化一个用于排列 Frontier artifact 的空间思考画布。",
         stack: ["React", "Vercel", "Canvas"],
-        update: "已接入 Vercel，生产域名已改为 infinite-canvas.feolhn.cn。",
-        next: "进入 /Users/hujiawei/Documents/180k/ui-labs/frontier-infinite-canvas，继续维护 Vercel 部署和自定义域名。",
-        links: ["https://infinite-canvas.feolhn.cn/", "#", "https://github.com/feolhn/frontier-board-lab"],
+        update: "已接入 Vercel，并接入 Cloudflare Access 私有域名 infinite-canvas.lab.feolhn.cn。",
+        next: "进入 /Users/hujiawei/Documents/180k/ui-labs/frontier-infinite-canvas，继续维护 Vercel 部署和私有域名。",
+        links: ["https://infinite-canvas.lab.feolhn.cn/", "#", "https://github.com/feolhn/frontier-board-lab"],
         cover: 14
       },
       {
