@@ -261,7 +261,7 @@ const statusLabels = {
 };
 
 const projectGroups = {
-  Featured: ["html-mocks", "image-output", "infinite-canvas"],
+  Featured: ["html-mocks", "image-output", "infinite-canvas", "us-ai-basket"],
   ThisMonth: ["html-mocks"],
   LastMonth: [],
   Older: [
