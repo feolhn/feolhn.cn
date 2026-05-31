@@ -283,8 +283,7 @@ const projectGroups = {
     "ipo-action-card",
     "memory-price-cycle",
     "fed-rates-oil-pressure",
-    "credit-risk",
-    "image-lab"
+    "credit-risk"
   ],
   ThisMonth: ["html-mocks"],
   LastMonth: [],
