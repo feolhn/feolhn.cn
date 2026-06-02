@@ -16,6 +16,32 @@ const categories = [
         cover: 5
       },
       {
+        id: "openrouter-ai-model-ranking",
+        name: "OpenRouter AI Model Ranking",
+        status: "Published",
+        version: "v0.1",
+        summary: "追踪 OpenRouter 模型排名",
+        purpose: "展示 OpenRouter 本周模型排名、Top 5 模型、7D token 量和周环比变化。",
+        stack: ["OpenRouter", "Frontier", "ECharts"],
+        update: "已注册到 Frontier，preview URL 已更新。",
+        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-openrouter-ai-model-ranking，维护 OpenRouter rankings 数据刷新链路。",
+        links: ["https://tile.okfrontier.com/preview/4828c6c9eeecc3f1", "#", "#"],
+        cover: 16
+      },
+      {
+        id: "artificial-analysis-ranking",
+        name: "Artificial Analysis Ranking Picks",
+        status: "Published",
+        version: "v0.1",
+        summary: "追踪模型智能、速度和价格排行",
+        purpose: "呈现 Artificial Analysis 首页 Highlights 模型池的智能、速度和价格榜。",
+        stack: ["Artificial Analysis", "Frontier", "ECharts"],
+        update: "已注册到 Frontier，preview URL 已更新。",
+        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-artificial-analysis-ranking，维护 Artificial Analysis API 刷新链路。",
+        links: ["https://tile.okfrontier.com/preview/169b1e477c942960", "#", "#"],
+        cover: 18
+      },
+      {
         id: "ipo-action-card",
         name: "IPO Action Card",
         status: "Published",
@@ -280,6 +306,8 @@ const projectGroups = {
     "infinite-canvas",
     "us-ai-basket",
     "epoch-compute-supply",
+    "openrouter-ai-model-ranking",
+    "artificial-analysis-ranking",
     "ipo-action-card",
     "memory-price-cycle",
     "fed-rates-oil-pressure",
@@ -289,6 +317,8 @@ const projectGroups = {
   LastMonth: [],
   Older: [
     "epoch-compute-supply",
+    "openrouter-ai-model-ranking",
+    "artificial-analysis-ranking",
     "ipo-action-card",
     "memory-price-cycle",
     "fed-rates-oil-pressure",
