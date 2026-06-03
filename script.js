@@ -42,6 +42,19 @@ const categories = [
         cover: 18
       },
       {
+        id: "world-cup-morning-brief",
+        name: "World Cup Morning Brief",
+        status: "Published",
+        version: "v0.1",
+        summary: "追踪 2026 世界杯晨报",
+        purpose: "把世界杯晨报摘要、昨晚结果、今日赛程和 48 强进度整理成 Frontier tile。",
+        stack: ["Frontier", "World Cup", "Brief"],
+        update: "已注册到 Frontier，preview URL 已更新。",
+        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-world-cup-morning-brief，维护赛程数据源和晨报刷新链路。",
+        links: ["https://tile.okfrontier.com/preview/61aced9cdabeac4a", "#", "#"],
+        cover: 20
+      },
+      {
         id: "ipo-action-card",
         name: "IPO Action Card",
         status: "Published",
@@ -308,6 +321,7 @@ const projectGroups = {
     "epoch-compute-supply",
     "openrouter-ai-model-ranking",
     "artificial-analysis-ranking",
+    "world-cup-morning-brief",
     "ipo-action-card",
     "memory-price-cycle",
     "fed-rates-oil-pressure",
@@ -319,6 +333,7 @@ const projectGroups = {
     "epoch-compute-supply",
     "openrouter-ai-model-ranking",
     "artificial-analysis-ranking",
+    "world-cup-morning-brief",
     "ipo-action-card",
     "memory-price-cycle",
     "fed-rates-oil-pressure",
