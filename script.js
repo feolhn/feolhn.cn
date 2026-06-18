@@ -234,6 +234,19 @@ const categories = [
         cover: 13
       },
       {
+        id: "llm-wiki",
+        name: "Frontier Wiki",
+        status: "Active",
+        version: "v1.0",
+        summary: "投资与 AI 研究 wiki",
+        purpose: "整理公司、概念、产业和宏观主题的静态研究 wiki。",
+        stack: ["Astro", "Cloudflare Pages", "Research Wiki"],
+        update: "Pages 项目已复活，当前临时域名为 llm-wiki-site-77f.pages.dev；建议绑定正式域名 wiki.feolhn.cn。",
+        next: "在 Cloudflare Pages 项目 llm-wiki-site-77f 的 Custom domains 中添加 wiki.feolhn.cn，并确认 DNS 自动生成 CNAME。",
+        links: ["https://wiki.feolhn.cn/", "#", "#"],
+        cover: 21
+      },
+      {
         id: "wiki-deck",
         name: "wiki deck lab",
         status: "Baseline",
@@ -316,6 +329,7 @@ const projectGroups = {
   Featured: [
     "html-mocks",
     "image-output",
+    "llm-wiki",
     "infinite-canvas",
     "us-ai-basket",
     "epoch-compute-supply",
@@ -327,7 +341,7 @@ const projectGroups = {
     "fed-rates-oil-pressure",
     "credit-risk"
   ],
-  ThisMonth: ["html-mocks"],
+  ThisMonth: ["html-mocks", "llm-wiki"],
   LastMonth: [],
   Older: [
     "epoch-compute-supply",
@@ -346,6 +360,7 @@ const projectGroups = {
     "infinite-canvas",
     "logo-motion",
     "image-output",
+    "llm-wiki",
     "wiki-deck",
     "frontier-profile",
     "rss-system"
