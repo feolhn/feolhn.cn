@@ -439,11 +439,24 @@ function projectIdFromLocation() {
   return new URLSearchParams(window.location.hash.slice(1)).get("project");
 }
 
+function resetDetailScroll() {
+  const reset = () => {
+    document.querySelector(".inspector").scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    window.scrollTo(0, 0);
+  };
+
+  reset();
+  window.requestAnimationFrame(reset);
+}
+
 function showMobileDetail(projectId) {
   if (!flatProjects.some((project) => project.id === projectId)) return;
   selectedId = projectId;
   document.body.classList.add("mobile-detail-open");
   render();
+  resetDetailScroll();
 }
 
 function showMobileList() {
@@ -474,6 +487,7 @@ document.addEventListener("click", (event) => {
       document.body.classList.add("mobile-detail-open");
     }
     render();
+    resetDetailScroll();
     return;
   }
 
