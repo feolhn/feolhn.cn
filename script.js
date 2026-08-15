@@ -402,13 +402,31 @@ function projectIdFromLocation() {
 
 function showMobileDetail(projectId) {
   if (!flatProjects.some((project) => project.id === projectId)) return;
+  window.clearTimeout(mobileTransitionTimer);
   selectedId = projectId;
+  document.body.classList.remove("mobile-detail-closing");
   document.body.classList.add("mobile-detail-open");
   render();
 }
 
-function showMobileList() {
-  document.body.classList.remove("mobile-detail-open");
+let mobileTransitionTimer;
+
+function showMobileList({ animate = true } = {}) {
+  window.clearTimeout(mobileTransitionTimer);
+  if (!document.body.classList.contains("mobile-detail-open")) return;
+
+  if (!animate) {
+    document.body.classList.remove("mobile-detail-open", "mobile-detail-closing");
+    return;
+  }
+
+  // Keep both views mounted for one frame so the detail page can slide out
+  // while the list slides back into place.
+  renderMobileList();
+  document.body.classList.add("mobile-detail-closing");
+  mobileTransitionTimer = window.setTimeout(() => {
+    document.body.classList.remove("mobile-detail-open", "mobile-detail-closing");
+  }, 280);
 }
 
 document.addEventListener("click", (event) => {
@@ -467,6 +485,41 @@ window.addEventListener("popstate", (event) => {
   }
   showMobileList();
 });
+
+// Some embedded browsers do not expose the native edge-back gesture to the
+// page. Keep the gesture as a small, edge-originating fallback, then use the
+// same history path and transition as the back button.
+let mobileSwipeStartX = 0;
+let mobileSwipeStartY = 0;
+let mobileSwipeTracking = false;
+
+document.addEventListener("touchstart", (event) => {
+  if (!document.body.classList.contains("mobile-detail-open") || event.touches.length !== 1) return;
+  const touch = event.touches[0];
+  mobileSwipeTracking = touch.clientX <= 42;
+  mobileSwipeStartX = touch.clientX;
+  mobileSwipeStartY = touch.clientY;
+}, { passive: true });
+
+document.addEventListener("touchmove", (event) => {
+  if (!mobileSwipeTracking || event.touches.length !== 1) return;
+  const touch = event.touches[0];
+  const deltaX = touch.clientX - mobileSwipeStartX;
+  const deltaY = touch.clientY - mobileSwipeStartY;
+  if (Math.abs(deltaY) > Math.abs(deltaX) && Math.abs(deltaY) > 8) {
+    mobileSwipeTracking = false;
+    return;
+  }
+  if (deltaX > 8) event.preventDefault();
+}, { passive: false });
+
+document.addEventListener("touchend", (event) => {
+  if (!mobileSwipeTracking) return;
+  const touch = event.changedTouches[0];
+  const deltaX = touch.clientX - mobileSwipeStartX;
+  mobileSwipeTracking = false;
+  if (deltaX >= 72 && window.history.state?.fromList) window.history.back();
+}, { passive: true });
 
 sidebarToggle.addEventListener("click", () => {
   const collapsed = appShell.classList.toggle("sidebar-collapsed");
