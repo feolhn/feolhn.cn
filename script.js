@@ -396,6 +396,21 @@ function render() {
   renderDetail();
 }
 
+function projectIdFromLocation() {
+  return new URLSearchParams(window.location.hash.slice(1)).get("project");
+}
+
+function showMobileDetail(projectId) {
+  if (!flatProjects.some((project) => project.id === projectId)) return;
+  selectedId = projectId;
+  document.body.classList.add("mobile-detail-open");
+  render();
+}
+
+function showMobileList() {
+  document.body.classList.remove("mobile-detail-open");
+}
+
 document.addEventListener("click", (event) => {
   const categoryToggle = event.target.closest("[data-category-toggle]");
   if (categoryToggle) {
@@ -410,7 +425,14 @@ document.addEventListener("click", (event) => {
   if (projectButton) {
     const isMobileProject = Boolean(projectButton.closest(".mobile-project-list"));
     selectedId = projectButton.dataset.project;
-    if (isMobileProject) document.body.classList.add("mobile-detail-open");
+    if (isMobileProject) {
+      window.history.pushState(
+        { view: "detail", projectId: selectedId, fromList: true },
+        "",
+        `#project=${encodeURIComponent(selectedId)}`
+      );
+      document.body.classList.add("mobile-detail-open");
+    }
     render();
     return;
   }
@@ -429,40 +451,22 @@ searchInput.addEventListener("input", (event) => {
 });
 
 document.querySelector("#mobileBack").addEventListener("click", () => {
-  document.body.classList.remove("mobile-detail-open");
+  if (window.history.state?.fromList) {
+    window.history.back();
+    return;
+  }
+  window.history.replaceState({ view: "list" }, "", `${window.location.pathname}${window.location.search}`);
+  showMobileList();
 });
 
-let mobileSwipeStartX = 0;
-let mobileSwipeStartY = 0;
-let mobileSwipeTracking = false;
-
-document.addEventListener("touchstart", (event) => {
-  if (!document.body.classList.contains("mobile-detail-open")) return;
-  const touch = event.touches[0];
-  mobileSwipeTracking = touch.clientX <= 24;
-  if (!mobileSwipeTracking) return;
-  mobileSwipeStartX = touch.clientX;
-  mobileSwipeStartY = touch.clientY;
-}, { passive: true });
-
-document.addEventListener("touchmove", (event) => {
-  if (!mobileSwipeTracking) return;
-  const touch = event.touches[0];
-  const deltaX = touch.clientX - mobileSwipeStartX;
-  const deltaY = Math.abs(touch.clientY - mobileSwipeStartY);
-  if (deltaX > 12 && deltaX > deltaY) event.preventDefault();
-}, { passive: false });
-
-document.addEventListener("touchend", (event) => {
-  if (!mobileSwipeTracking) return;
-  const touch = event.changedTouches[0];
-  const deltaX = touch.clientX - mobileSwipeStartX;
-  const deltaY = Math.abs(touch.clientY - mobileSwipeStartY);
-  mobileSwipeTracking = false;
-  if (deltaX >= 70 && deltaX > deltaY * 1.25) {
-    document.body.classList.remove("mobile-detail-open");
+window.addEventListener("popstate", (event) => {
+  const projectId = event.state?.projectId || projectIdFromLocation();
+  if (projectId && window.matchMedia("(max-width: 820px)").matches) {
+    showMobileDetail(projectId);
+    return;
   }
-}, { passive: true });
+  showMobileList();
+});
 
 sidebarToggle.addEventListener("click", () => {
   const collapsed = appShell.classList.toggle("sidebar-collapsed");
@@ -496,6 +500,25 @@ themeToggle.addEventListener("click", () => {
   const next = themeOptions[(currentIndex + 1) % themeOptions.length];
   applyTheme(next.mode);
 });
+
+const initialProjectId = projectIdFromLocation();
+if (
+  initialProjectId &&
+  flatProjects.some((project) => project.id === initialProjectId) &&
+  window.matchMedia("(max-width: 820px)").matches
+) {
+  selectedId = initialProjectId;
+  document.body.classList.add("mobile-detail-open");
+  if (!window.history.state?.projectId) {
+    window.history.replaceState(
+      { view: "detail", projectId: initialProjectId, fromList: false },
+      "",
+      window.location.href
+    );
+  }
+} else if (!window.history.state) {
+  window.history.replaceState({ view: "list" }, "", window.location.href);
+}
 
 applyTheme(themeMode);
 render();
