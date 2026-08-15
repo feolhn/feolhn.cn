@@ -237,13 +237,13 @@ const categories = [
         next: "后续新增会议纪要时，继续按文件名和会议时间补充到此合集。",
         links: [],
         resources: [
-          { date: "2026-06-30 20:40", summary: "会议确定 AI 信息总结产品的基本方向：整合多来源信息，降低用户处理成本，并以“有用”为首要验证标准。商业上倾向围绕单个股票或行业订阅，产品形态强调统一、简洁和可对比。", url: "https://cloud.huozi.app/p/3ebvx4behd" },
-          { date: "2026-06-30 21:09", summary: "会议进一步提出 X 信息聚合框架：先用用户关系网组织 thread，再用 AI 语义标签聚合成 event，并通过关键词、小模型和 AI 打分过滤噪声。", delta: "从产品定位推进到可落地的关系网、语义层与成本控制方案", url: "https://cloud.huozi.app/p/75tpn3n6wa" },
-          { date: "2026-06-30 21:23", summary: "会议转向产品的商业化与市场路径，讨论 AI 总结服务如何建立用户习惯、沉淀为付费知识资产，并规划 TMTB 亚洲版及 Wiki 式延伸产品。", delta: "新增竞品分析、用户迁移、付费知识资产与投资人沟通议题", url: "https://cloud.huozi.app/p/vx7y4xa9xq" },
-          { date: "2026-06-30 21:47", summary: "会议把信息聚合推进到 Feed 产品设计：设定时间窗口和评分体系，结合上下文加载、标签过滤、缓存与人工 Review，评估信息和用户的真实价值。", delta: "新增自动化 Feed 流程、上下文策略、缓存机制与用户价值评估", url: "https://cloud.huozi.app/p/kv2ycbdj43" },
-          { date: "2026-06-30 22:31", summary: "会议将讨论扩展到 AI 工具的价值模式与数据基础设施：通过封装 API 和搜索降低使用门槛，同时持续生产 TMTB 亚洲版内容，并研究无头浏览器取数。", delta: "新增工具产品付费模式、内容生产计划与外部数据获取方案", url: "https://cloud.huozi.app/p/6fu69zercc" },
-          { date: "2026-08-14 18:29", summary: "会议主题转向金融 AI 模型评测，明确榜单不追求通用数学能力，而是评估降噪、循证叙事、金融知识与判断等真实决策能力，并开始设计题型。", delta: "从信息产品建设转向金融模型能力评测，并建立具体能力维度", url: "https://cloud.huozi.app/p/swavap6xug" },
-          { date: "2026-08-14 19:09", summary: "会议进一步把模型评测具体化为三种信息环境：无额外数据、提供特定数据源、对比模型形成榜单，并计划用 20 道题目刻画模型的能力边界。", delta: "新增三种评测场景、20 道题目和明确的项目推进分工", url: "https://cloud.huozi.app/p/yvcbdav8c6" }
+          { date: "2026-06-30 20:40", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议确定 AI 信息总结产品的基本方向：整合多来源信息，降低用户处理成本，并以“有用”为首要验证标准。商业上倾向围绕单个股票或行业订阅，产品形态强调统一、简洁和可对比。", url: "https://cloud.huozi.app/p/3ebvx4behd" },
+          { date: "2026-06-30 21:09", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议进一步提出 X 信息聚合框架：先用用户关系网组织 thread，再用 AI 语义标签聚合成 event，并通过关键词、小模型和 AI 打分过滤噪声。", delta: "从产品定位推进到可落地的关系网、语义层与成本控制方案", url: "https://cloud.huozi.app/p/75tpn3n6wa" },
+          { date: "2026-06-30 21:23", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议转向产品的商业化与市场路径，讨论 AI 总结服务如何建立用户习惯、沉淀为付费知识资产，并规划 TMTB 亚洲版及 Wiki 式延伸产品。", delta: "新增竞品分析、用户迁移、付费知识资产与投资人沟通议题", url: "https://cloud.huozi.app/p/vx7y4xa9xq" },
+          { date: "2026-06-30 21:47", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议把信息聚合推进到 Feed 产品设计：设定时间窗口和评分体系，结合上下文加载、标签过滤、缓存与人工 Review，评估信息和用户的真实价值。", delta: "新增自动化 Feed 流程、上下文策略、缓存机制与用户价值评估", url: "https://cloud.huozi.app/p/kv2ycbdj43" },
+          { date: "2026-06-30 22:31", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议将讨论扩展到 AI 工具的价值模式与数据基础设施：通过封装 API 和搜索降低使用门槛，同时持续生产 TMTB 亚洲版内容，并研究无头浏览器取数。", delta: "新增工具产品付费模式、内容生产计划与外部数据获取方案", url: "https://cloud.huozi.app/p/6fu69zercc" },
+          { date: "2026-08-14 18:29", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议主题转向金融 AI 模型评测，明确榜单不追求通用数学能力，而是评估降噪、循证叙事、金融知识与判断等真实决策能力，并开始设计题型。", delta: "从信息产品建设转向金融模型能力评测，并建立具体能力维度", url: "https://cloud.huozi.app/p/swavap6xug" },
+          { date: "2026-08-14 19:09", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议进一步把模型评测具体化为三种信息环境：无额外数据、提供特定数据源、对比模型形成榜单，并计划用 20 道题目刻画模型的能力边界。", delta: "新增三种评测场景、20 道题目和明确的项目推进分工", url: "https://cloud.huozi.app/p/yvcbdav8c6" }
         ],
         cover: 20
       }
@@ -326,6 +326,11 @@ function statusLabel(status) {
 
 function statusClass(status) {
   return status.replace(/\s+/g, "");
+}
+
+function formatMeetingDate(date) {
+  const match = date.match(/^\d{4}-(\d{2})-(\d{2})\s(\d{2}:\d{2})$/);
+  return match ? `${Number(match[1])}月${Number(match[2])}日 ${match[3]}` : date;
 }
 
 function filteredProjects(projects) {
@@ -418,7 +423,7 @@ function renderDetail() {
       <div class="entry-links resource-links">
         ${resources.map((resource) => `
           <a href="${resource.url}" target="_blank" rel="noreferrer">
-            <span class="resource-copy"><strong>腾讯会议元宝摘要</strong><small>${resource.date}</small><em>${resource.summary}</em>${resource.delta ? `<span class="resource-delta">较上一场新增：${resource.delta}</span>` : ""}</span>
+            <span class="resource-copy"><strong>${formatMeetingDate(resource.date)}</strong><span class="resource-tags">${resource.participants.map((participant) => `<small>${participant}</small>`).join("")}</span><em>${resource.summary}</em>${resource.delta ? `<span class="resource-delta">较上一场新增：${resource.delta}</span>` : ""}</span>
             <span class="resource-arrow">↗</span>
           </a>`).join("")}
       </div>`;

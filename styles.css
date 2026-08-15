@@ -877,7 +877,8 @@ h1 {
 .resource-links a:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--panel-strong)); color: var(--ink); }
 .resource-copy { display: grid; gap: 3px; min-width: 0; }
 .resource-copy strong { font-size: 13px; font-weight: 650; }
-.resource-copy small { color: var(--muted); font-size: 11px; }
+.resource-tags { display: flex; flex-wrap: wrap; gap: 4px; margin: 1px 0 2px; }
+.resource-tags small { border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--panel) 80%, var(--bg)); color: var(--muted); font-size: 10px; line-height: 1.4; padding: 2px 6px; }
 .resource-copy em { color: var(--muted); font-size: 12px; font-style: normal; line-height: 1.45; }
 .resource-delta { color: var(--accent); font-size: 11px; font-weight: 700; line-height: 1.4; }
 .resource-arrow { flex: 0 0 auto; margin-left: 10px; color: var(--muted); font-size: 15px; }
