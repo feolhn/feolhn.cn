@@ -886,21 +886,6 @@ body::-webkit-scrollbar { display: none; width: 0; height: 0; }
 body { scrollbar-width: none; }
 
 @media (max-width: 820px) {
-  @keyframes mobile-detail-enter {
-    from { opacity: 0.86; transform: translateX(100%); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-
-  @keyframes mobile-detail-exit {
-    from { opacity: 1; transform: translateX(0); }
-    to { opacity: 0.96; transform: translateX(100%); }
-  }
-
-  @keyframes mobile-list-enter {
-    from { opacity: 0.86; transform: translateX(-18%); }
-    to { opacity: 1; transform: translateX(0); }
-  }
-
   body { overflow: auto; overflow-x: hidden; background: var(--bg); }
   .app-shell, .app-shell.sidebar-collapsed { display: block; }
   .sidebar { display: none; }
@@ -922,27 +907,7 @@ body { scrollbar-width: none; }
   .mobile-project-row .dot { width: 7px; height: 7px; flex-basis: 7px; }
   .inspector { display: none; border: 0; min-height: 100vh; background: var(--panel); }
   body.mobile-detail-open .workspace { display: none; }
-  body.mobile-detail-open .inspector {
-    display: block;
-    animation: mobile-detail-enter 280ms cubic-bezier(0.22, 0.8, 0.25, 1) both;
-    will-change: transform, opacity;
-  }
-  body.mobile-detail-open.mobile-detail-closing .workspace {
-    display: block;
-    position: fixed;
-    inset: 0;
-    z-index: 1;
-    overflow: auto;
-    animation: mobile-list-enter 280ms cubic-bezier(0.22, 0.8, 0.25, 1) both;
-    will-change: transform, opacity;
-  }
-  body.mobile-detail-open.mobile-detail-closing .inspector {
-    position: fixed;
-    inset: 0;
-    z-index: 2;
-    overflow: auto;
-    animation: mobile-detail-exit 280ms cubic-bezier(0.22, 0.8, 0.25, 1) both;
-  }
+  body.mobile-detail-open .inspector { display: block; }
   body.mobile-detail-open .inspector-card { min-height: 100vh; padding: 0 22px 48px; }
   .mobile-back { display: flex; align-items: center; width: calc(100% + 44px); min-height: 48px; margin: 0 -22px 30px; padding: 0 22px; border: 0; border-bottom: 1px solid var(--line); background: var(--panel); color: var(--ink); font-size: 14px; cursor: pointer; text-align: left; }
   .inspector h2 { font-size: 38px; line-height: 1.03; margin: 24px 0 10px; }
@@ -952,12 +917,4 @@ body { scrollbar-width: none; }
   .inspector h3 { font-size: 17px; margin-bottom: 12px; }
   .inspector p { font-size: 14px; line-height: 1.65; }
   .entry-section { padding-top: 6px !important; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  body.mobile-detail-open .inspector,
-  body.mobile-detail-open.mobile-detail-closing .workspace,
-  body.mobile-detail-open.mobile-detail-closing .inspector {
-    animation: none;
-  }
 }
