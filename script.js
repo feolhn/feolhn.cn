@@ -432,6 +432,38 @@ document.querySelector("#mobileBack").addEventListener("click", () => {
   document.body.classList.remove("mobile-detail-open");
 });
 
+let mobileSwipeStartX = 0;
+let mobileSwipeStartY = 0;
+let mobileSwipeTracking = false;
+
+document.addEventListener("touchstart", (event) => {
+  if (!document.body.classList.contains("mobile-detail-open")) return;
+  const touch = event.touches[0];
+  mobileSwipeTracking = touch.clientX <= 24;
+  if (!mobileSwipeTracking) return;
+  mobileSwipeStartX = touch.clientX;
+  mobileSwipeStartY = touch.clientY;
+}, { passive: true });
+
+document.addEventListener("touchmove", (event) => {
+  if (!mobileSwipeTracking) return;
+  const touch = event.touches[0];
+  const deltaX = touch.clientX - mobileSwipeStartX;
+  const deltaY = Math.abs(touch.clientY - mobileSwipeStartY);
+  if (deltaX > 12 && deltaX > deltaY) event.preventDefault();
+}, { passive: false });
+
+document.addEventListener("touchend", (event) => {
+  if (!mobileSwipeTracking) return;
+  const touch = event.changedTouches[0];
+  const deltaX = touch.clientX - mobileSwipeStartX;
+  const deltaY = Math.abs(touch.clientY - mobileSwipeStartY);
+  mobileSwipeTracking = false;
+  if (deltaX >= 70 && deltaX > deltaY * 1.25) {
+    document.body.classList.remove("mobile-detail-open");
+  }
+}, { passive: true });
+
 sidebarToggle.addEventListener("click", () => {
   const collapsed = appShell.classList.toggle("sidebar-collapsed");
   sidebarToggle.setAttribute("aria-expanded", String(!collapsed));
