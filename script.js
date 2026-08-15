@@ -1,162 +1,141 @@
 const categories = [
   {
+    name: "Frontier Systems",
+    projects: [
+      {
+        id: "llm-wiki",
+        name: "金融 Wiki 百科-草稿",
+        status: "Active",
+        version: "v1.0",
+        summary: "投资与 AI 研究 wiki",
+        purpose: "整理公司、概念、产业和宏观主题的静态研究 wiki。",
+        stack: ["Astro", "Cloudflare Pages", "Research Wiki"],
+        update: "已绑定正式域名 wiki.feolhn.cn，当前入口已更新。",
+        next: "持续维护金融与 AI 研究内容，并保持正式域名入口稳定。",
+        links: ["https://wiki.feolhn.cn/"],
+        cover: 21
+      }
+    ]
+  },
+  {
     name: "Frontier Tiles",
     projects: [
       {
-        id: "epoch-compute-supply",
-        name: "Epoch Compute Supply",
-        status: "Published",
-        version: "v0.1",
-        summary: "追踪 AI 算力供给信号",
-        purpose: "把 Epoch 相关算力供给、模型训练资源和产业节奏整理成 Frontier tile。",
-        stack: ["Frontier", "Compute", "AI"],
-        update: "已注册到 Frontier，tile_id 为 da3a8bb7c206a501。",
-        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-epoch-compute-supply，确认 webhook 数据推送和定时刷新链路。",
-        links: ["https://tile.okfrontier.com/preview/da3a8bb7c206a501", "#", "#"],
-        cover: 5
-      },
-      {
         id: "openrouter-ai-model-ranking",
-        name: "OpenRouter AI Model Ranking",
+        name: "OpenRouter 模型排行",
         status: "Published",
         version: "v0.1",
         summary: "追踪 OpenRouter 模型排名",
         purpose: "展示 OpenRouter 本周模型排名、Top 5 模型、7D token 量和周环比变化。",
         stack: ["OpenRouter", "Frontier", "ECharts"],
         update: "已注册到 Frontier，preview URL 已更新。",
-        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-openrouter-ai-model-ranking，维护 OpenRouter rankings 数据刷新链路。",
-        links: ["https://tile.okfrontier.com/preview/4828c6c9eeecc3f1", "#", "#"],
+        next: "维护 OpenRouter rankings 数据刷新链路。",
+        links: ["https://tile.okfrontier.com/preview/4828c6c9eeecc3f1"],
         cover: 16
       },
       {
         id: "artificial-analysis-ranking",
-        name: "Artificial Analysis Ranking Picks",
+        name: "Artificial Analysis 模型排行",
         status: "Published",
         version: "v0.1",
         summary: "追踪模型智能、速度和价格排行",
         purpose: "呈现 Artificial Analysis 首页 Highlights 模型池的智能、速度和价格榜。",
         stack: ["Artificial Analysis", "Frontier", "ECharts"],
         update: "已注册到 Frontier，preview URL 已更新。",
-        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-artificial-analysis-ranking，维护 Artificial Analysis API 刷新链路。",
-        links: ["https://tile.okfrontier.com/preview/169b1e477c942960", "#", "#"],
+        next: "维护 Artificial Analysis API 刷新链路。",
+        links: ["https://tile.okfrontier.com/preview/169b1e477c942960"],
         cover: 18
       },
       {
         id: "world-cup-morning-brief",
-        name: "World Cup Morning Brief",
+        name: "世界杯晨报",
         status: "Published",
         version: "v0.1",
         summary: "追踪 2026 世界杯晨报",
         purpose: "把世界杯晨报摘要、昨晚结果、今日赛程和 48 强进度整理成 Frontier tile。",
         stack: ["Frontier", "World Cup", "Brief"],
         update: "已注册到 Frontier，preview URL 已更新。",
-        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-world-cup-morning-brief，维护赛程数据源和晨报刷新链路。",
-        links: ["https://tile.okfrontier.com/preview/61aced9cdabeac4a", "#", "#"],
+        next: "维护赛程数据源和晨报刷新链路。",
+        links: ["https://tile.okfrontier.com/preview/61aced9cdabeac4a"],
         cover: 20
       },
       {
         id: "ipo-action-card",
-        name: "IPO Action Card",
+        name: "A股 IPO 日历",
         status: "Published",
         version: "v0.1",
         summary: "追踪 IPO 行动信号",
         purpose: "把 IPO 相关事件和行动信号压缩成可快速扫描的 Frontier tile。",
         stack: ["Frontier", "Tile", "Signals"],
         update: "已注册到 Frontier，preview URL 返回 200；last_webhook_received_at 仍为空，后续需要确认是否已推送真实数据。",
-        next: "进入 /Users/hujiawei/Documents/180k/tiles，定位 IPO Action Card 对应目录并补齐 webhook 发布链路。",
-        links: ["https://tile.okfrontier.com/preview/2aecd82f3e85ac30", "#", "#"],
+        next: "定位 A股 IPO 看板对应项目并补齐 webhook 发布链路。",
+        links: ["https://tile.okfrontier.com/preview/2aecd82f3e85ac30"],
         cover: 8
       },
       {
         id: "memory-price-cycle",
-        name: "Memory Price Cycle",
+        name: "存储价格走势",
         status: "Published",
         version: "v0.1",
         summary: "观察存储价格周期",
         purpose: "把内存与存储价格周期整理成可持续刷新的市场观察卡。",
         stack: ["Frontier", "Market data", "Tile"],
         update: "已注册并发布，preview URL 返回 200。",
-        next: "进入 /Users/hujiawei/Documents/180k/tiles，确认数据源和定时刷新边界。",
-        links: ["https://tile.okfrontier.com/preview/f0bb89a0d2bc2ed9", "#", "#"],
+        next: "确认数据源和定时刷新边界。",
+        links: ["https://tile.okfrontier.com/preview/f0bb89a0d2bc2ed9"],
         cover: 9
       },
       {
         id: "fed-rates-oil-pressure",
-        name: "Fed / Rates / Oil Pressure Card",
+        name: "美联储政策汇总",
         status: "Published",
         version: "v0.1",
         summary: "跟踪利率、油价和政策压力",
         purpose: "把美联储、利率和油价压力合成一个宏观风险观察入口。",
         stack: ["Frontier", "Macro", "Signals"],
         update: "已注册并发布，preview URL 返回 200。",
-        next: "进入 /Users/hujiawei/Documents/180k/tiles，确认宏观数据刷新链路。",
-        links: ["https://tile.okfrontier.com/preview/7fd497ce7a947e0e", "#", "#"],
+        next: "确认宏观数据刷新链路。",
+        links: ["https://tile.okfrontier.com/preview/7fd497ce7a947e0e"],
         cover: 10
       },
       {
         id: "credit-risk",
-        name: "Credit Market Risk Light",
+        name: "美国信用风险观测",
         status: "Active",
         version: "v2.0",
         summary: "追踪信用压力是否领先恶化",
         purpose: "在权益市场反应之前，识别信用压力是否正在恶化。",
         stack: ["FRED", "TypeScript", "ECharts", "Frontier"],
         update: "已注册并发布，preview URL 返回 200；本地 tile 项目保留，后续适合迁到 Cloudflare Worker 定时刷新链路。",
-        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-credit-market-risk-light，评估 Worker Cron + KV/R2 latest snapshot 发布方式。",
-        links: ["https://tile.okfrontier.com/preview/97ba60aaa9b455fe", "#", "#"],
+        next: "评估 Worker Cron + KV/R2 latest snapshot 发布方式。",
+        links: ["https://tile.okfrontier.com/preview/97ba60aaa9b455fe"],
         cover: 3
       },
       {
         id: "a-share-hot-stock",
-        name: "A-share Hot Stock Radar",
+        name: "A股热股雷达",
         status: "Active",
         version: "v1.4",
         summary: "用雷达视图观察 A 股热度",
         purpose: "用紧凑的市场信号雷达追踪 A 股热门股票动量。",
         stack: ["Sina", "TypeScript", "ECharts", "Publisher"],
         update: "已注册并发布，preview URL 返回 200；后续适合 Cloudflare 定时刷新。",
-        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-a-share-hot-stock-radar，整理数据源 fetch 边界，再迁 Worker Cron。",
-        links: ["https://tile.okfrontier.com/preview/605079f6f63725ab", "#", "#"],
+        next: "整理数据源 fetch 边界，再迁 Worker Cron。",
+        links: ["https://tile.okfrontier.com/preview/605079f6f63725ab"],
         cover: 1
       },
       {
         id: "us-ai-basket",
-        name: "US AI Basket Monitor",
+        name: "美股 AI 一篮子走势",
         status: "Active",
         version: "v1.2",
         summary: "跟踪美股 AI 供应链篮子",
         purpose: "监控美股 AI 供应链股票篮子的表现、分化与相对强弱。",
         stack: ["yfinance", "TypeScript", "ECharts", "Node"],
         update: "已注册并发布，preview URL 返回 200；后续适合迁到 Cloudflare 定时刷新。",
-        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-us-ai-basket-monitor，先确认 yfinance 采集能否在 Worker 环境替换或拆到外部刷新器。",
-        links: ["https://tile.okfrontier.com/preview/49413f3b5cdb8acb", "#", "#"],
+        next: "确认 yfinance 采集能否在 Worker 环境替换或拆到外部刷新器。",
+        links: ["https://tile.okfrontier.com/preview/49413f3b5cdb8acb"],
         cover: 2
-      },
-      {
-        id: "chinese-tech",
-        name: "Chinese Tech Business Radar",
-        status: "Published",
-        version: "v1.1",
-        summary: "整理中国科技与商业信号",
-        purpose: "把中国科技和商业信号整理成紧凑的市场观察卡组。",
-        stack: ["Data scripts", "TypeScript", "Signals"],
-        update: "已注册并发布，preview URL 返回 200；后续适合 Cloudflare 统一调度。",
-        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-chinese-tech-radar，保留 signal taxonomy，迁移 RSS/LLM 刷新流程。",
-        links: ["https://tile.okfrontier.com/preview/0d5a0f83200073db", "#", "#"],
-        cover: 6
-      },
-      {
-        id: "podcast-digest",
-        name: "Podcast Conversation Map",
-        status: "Published",
-        version: "v1.0",
-        summary: "把播客对话映射成结构图",
-        purpose: "把播客长对话整理成可读、可回看的 Frontier conversation map。",
-        stack: ["Transcript", "QA", "Dark mode"],
-        update: "已注册并发布，preview URL 返回 200；后续适合 Cloudflare 定时刷新。",
-        next: "进入 /Users/hujiawei/Documents/180k/tiles/frontier-podcast-digest，确认 RSSHub 与 LLM key 边界，再迁 Worker Cron。",
-        links: ["https://tile.okfrontier.com/preview/fb6ca4004efbab26", "#", "#"],
-        cover: 7
       }
     ]
   },
@@ -165,7 +144,7 @@ const categories = [
     projects: [
       {
         id: "html-mocks",
-        name: "Frontier UI Mocks",
+        name: "Frontier UI界面调节设置-草稿",
         status: "Active",
         version: "v0.9",
         summary: "frontier APP前端草稿及对比",
@@ -173,122 +152,78 @@ const categories = [
         stack: ["HTML", "CSS", "Cloudflare Pages", "Assets"],
         update: "已从 Netlify 迁移到 Cloudflare Pages，并接入 Cloudflare Access 私有域名 ui-mocks.lab.feolhn.cn。",
         next: "后续主流程：本地改前端，运行 npm run build，提交并 push GitHub，由 Cloudflare Pages 发布。",
-        links: ["https://ui-mocks.lab.feolhn.cn/", "#", "https://github.com/feolhn/frontier-html-mocks"],
+        links: ["https://ui-mocks.lab.feolhn.cn/", "https://github.com/feolhn/frontier-html-mocks"],
         cover: 11
       },
       {
-        id: "image-lab",
-        name: "frontier image lab",
-        status: "Active",
-        version: "v1.0",
-        summary: "管理视觉实验和图像流",
-        purpose: "管理视觉实验、参考图、gallery capture 和图像生成工作流。",
-        stack: ["Gallery", "Prompts", "References"],
-        update: "current UI、experiments、gallery、references、scripts 和 skills 已拆分。",
-        next: "把唱片封套作为实验项目的可复用视觉语言。",
-        links: ["#", "#", "#"],
-        cover: 12
-      },
-      {
         id: "infinite-canvas",
-        name: "frontier infinite canvas",
+        name: "无限画布",
         status: "Active",
         version: "v0.8",
         summary: "frontier的无限画布",
         purpose: "原型化一个用于排列 Frontier artifact 的空间思考画布。",
         stack: ["React", "Vercel", "Canvas"],
         update: "已接入 Vercel，并接入 Cloudflare Access 私有域名 infinite-canvas.lab.feolhn.cn。",
-        next: "进入 /Users/hujiawei/Documents/180k/ui-labs/frontier-infinite-canvas，继续维护 Vercel 部署和私有域名。",
-        links: ["https://infinite-canvas.lab.feolhn.cn/", "#", "https://github.com/feolhn/frontier-board-lab"],
+        next: "继续维护 Vercel 部署和私有域名。",
+        links: ["https://infinite-canvas.lab.feolhn.cn/", "https://github.com/feolhn/frontier-board-lab"],
         cover: 14
       },
-      {
-        id: "logo-motion",
-        name: "frontier logo motion",
-        status: "Active",
-        version: "v0.7",
-        summary: "探索 Frontier 标识动效",
-        purpose: "围绕 Frontier 标识探索动效、身份系统和站点资产。",
-        stack: ["Motion", "Output", "Site"],
-        update: "output、public、site 和 source 目录已分开。",
-        next: "挑选最好的动效静帧作为唱片封面。",
-        links: ["#", "#", "#"],
-        cover: 15
-      }
     ]
   },
   {
-    name: "LLM Tools",
+    name: "Other",
     projects: [
       {
         id: "image-output",
-        name: "image output lab",
+        name: "One-page 信息图生成器",
         status: "Active",
         version: "v1.2",
         summary: "测试 LLM 视觉输出管线",
         purpose: "测试 LLM 视觉输出管线，并比较不同生成图像 artifact。",
         stack: ["Next.js", "Vercel", "Image workflow"],
         update: "当前在 Vercel，生产域名已改为 info-to-image.feolhn.cn。",
-        next: "进入 /Users/hujiawei/Documents/180k/llm-tools/image-output-lab，继续维护 Vercel 环境变量和自定义域名。",
-        links: ["https://info-to-image.feolhn.cn/", "#", "https://github.com/feolhn/prompt-lab"],
+        next: "继续维护 Vercel 环境变量和自定义域名。",
+        links: ["https://info-to-image.feolhn.cn/"],
         cover: 13
       },
       {
-        id: "llm-wiki",
-        name: "Frontier Wiki",
+        id: "ipo-dashboard",
+        name: "A股 IPO 看板",
         status: "Active",
-        version: "v1.0",
-        summary: "投资与 AI 研究 wiki",
-        purpose: "整理公司、概念、产业和宏观主题的静态研究 wiki。",
-        stack: ["Astro", "Cloudflare Pages", "Research Wiki"],
-        update: "Pages 项目已复活，当前临时域名为 llm-wiki-site-77f.pages.dev；建议绑定正式域名 wiki.feolhn.cn。",
-        next: "在 Cloudflare Pages 项目 llm-wiki-site-77f 的 Custom domains 中添加 wiki.feolhn.cn，并确认 DNS 自动生成 CNAME。",
-        links: ["https://wiki.feolhn.cn/", "#", "#"],
-        cover: 21
+        version: "v0.1",
+        summary: "查看新股申购与历史表现",
+        purpose: "统计每天可申购的新股，并汇总历史新股的成交额、申购量、上市市盈率与上市后的涨幅变化。",
+        stack: ["IPO", "Market data", "Dashboard"],
+        update: "已建立新股日历与历史新股汇总入口。",
+        next: "完善每日新股数据更新，并补充单只新股的历史变化明细。",
+        links: ["https://ipo.feolhn.cn/"],
+        cover: 8
       },
       {
-        id: "wiki-deck",
-        name: "wiki deck lab",
-        status: "Baseline",
-        version: "v0.3",
-        summary: "把 wiki 内容转成 deck",
-        purpose: "实验如何把 wiki 材料整理成 deck 形态的摘要。",
-        stack: ["Deck", "Dist", "Narrative"],
-        update: "dist 输出是当前主要工作 artifact。",
-        next: "作为未来 presentation export 的参考。",
-        links: ["#", "#", "#"],
-        cover: 10
-      }
-    ]
-  },
-  {
-    name: "Research Systems",
-    projects: [
-      {
-        id: "frontier-profile",
-        name: "frontier profile",
+        id: "earnings-call-example",
+        name: "财报电话会示例",
         status: "Active",
-        version: "run-008",
-        summary: "从群聊中提取贡献画像",
-        purpose: "从微信群导出中提取有证据支撑的贡献画像。",
-        stack: ["Python", "Streamlit", "Data runs"],
-        update: "runs 已包含 profile review dashboard 和 growth profile data。",
-        next: "把私有 raw exports 和公开项目描述严格分离。",
-        links: ["#", "#", "#"],
+        version: "v0.1",
+        summary: "探索电话会文字稿的阅读交互",
+        purpose: "将下载的 NBIS 最近一次财报电话会录音转成文字稿，探索如何通过动效、结构化阅读和交互加工，让长篇电话会更易读。",
+        stack: ["Transcript", "Interaction", "Motion"],
+        update: "已完成一场 NBIS 财报电话会录音的文字稿整理。",
+        next: "探索文字稿分段、重点标注、时间轴和动效交互的组合方式。",
+        links: ["https://earningcallexample.feolhn.cn/"],
+        cover: 7
+      },
+      {
+        id: "harvey-eval-study",
+        name: "Harvey 评测研究",
+        status: "Active",
+        version: "v0.1",
+        summary: "拆解开源 Bench 的评测设计",
+        purpose: "研究 Harvey 开源 Bench 的评测结构：输入一组任务或材料，生成输出，再通过评分表判断哪些表现加分、哪些表现减分。",
+        stack: ["Benchmark", "Evaluation", "Scoring"],
+        update: "已从 Harvey 开源 Bench 中摘取一组评测进行结构分析。",
+        next: "梳理 Input、Output、评分规则与最终得分之间的完整链路。",
+        links: ["https://harvey-eval-study.feolhn.cn/"],
         cover: 19
-      },
-      {
-        id: "rss-system",
-        name: "rss 信息源系统",
-        status: "Active",
-        version: "v0.5",
-        summary: "梳理投资与 AI 信息源",
-        purpose: "为投资和 AI wiki ingest 梳理官方 feed、RSSHub 路由和 fallback source。",
-        stack: ["RSS", "RSSHub", "Source QA"],
-        update: "优先官方 RSS，其次稳定网页，再考虑私有 RSSHub。",
-        next: "只把通过测试的信息源推进 MVP ingest 主链路。",
-        links: ["#", "#", "#"],
-        cover: 17
       }
     ]
   }
@@ -298,9 +233,10 @@ let selectedId = "credit-risk";
 let activeFilter = "Featured";
 let searchTerm = "";
 let themeMode = localStorage.getItem("themeMode") || "system";
+const collapsedCategories = new Set();
 
 const nav = document.querySelector("#projectNav");
-const shelfRows = document.querySelector("#shelfRows");
+const mobileProjectList = document.querySelector("#mobileProjectList");
 const searchInput = document.querySelector("#searchInput");
 const filterButtons = [...document.querySelectorAll(".filter")];
 const appShell = document.querySelector(".app-shell");
@@ -312,10 +248,10 @@ const flatProjects = categories.flatMap((category) =>
 );
 
 const categoryLabels = {
-  "Frontier Tiles": "Frontier 瓦片",
-  "UI Labs": "UI 实验",
-  "LLM Tools": "LLM 工具",
-  "Research Systems": "研究系统"
+  "Frontier Systems": "Frontier 系统设计",
+  "Frontier Tiles": "Frontier 磁贴",
+  "UI Labs": "Frontier UI 实验",
+  Other: "其他"
 };
 
 const statusLabels = {
@@ -332,7 +268,6 @@ const projectGroups = {
     "llm-wiki",
     "infinite-canvas",
     "us-ai-basket",
-    "epoch-compute-supply",
     "openrouter-ai-model-ranking",
     "artificial-analysis-ranking",
     "world-cup-morning-brief",
@@ -344,7 +279,6 @@ const projectGroups = {
   ThisMonth: ["html-mocks", "llm-wiki"],
   LastMonth: [],
   Older: [
-    "epoch-compute-supply",
     "openrouter-ai-model-ranking",
     "artificial-analysis-ranking",
     "world-cup-morning-brief",
@@ -354,16 +288,9 @@ const projectGroups = {
     "credit-risk",
     "a-share-hot-stock",
     "us-ai-basket",
-    "chinese-tech",
-    "podcast-digest",
-    "image-lab",
     "infinite-canvas",
-    "logo-motion",
     "image-output",
-    "llm-wiki",
-    "wiki-deck",
-    "frontier-profile",
-    "rss-system"
+    "llm-wiki"
   ]
 };
 
@@ -377,10 +304,6 @@ function statusLabel(status) {
 
 function statusClass(status) {
   return status.replace(/\s+/g, "");
-}
-
-function coverVars(index) {
-  return `--cover-image:url("./assets/covers/cover-${String(index).padStart(2, "0")}.webp")`;
 }
 
 function filteredProjects(projects) {
@@ -421,41 +344,31 @@ function renderNav() {
     .join("");
 }
 
-function rowsForShelf() {
-  const projects = filteredProjects(flatProjects);
-  const rows = [];
-  for (let i = 0; i < projects.length; i += 4) rows.push(projects.slice(i, i + 4));
-  return rows;
-}
-
-function renderShelf() {
-  const rows = rowsForShelf();
-  shelfRows.innerHTML = rows.length
-    ? rows
-        .map(
-          (row) => `
-            <div class="shelf-row">
-              ${row
-                .map(
-                  (project) => `
-                    <button class="record ${project.id === selectedId ? "active" : ""}" type="button" data-project="${project.id}" style='${coverVars(project.cover)}'>
-                      <span>
-                        <h2>${project.name}</h2>
-                        <small>${project.summary}</small>
-                      </span>
-                      <span class="record-footer">
-                        <span>${project.version}</span>
-                        <span>${statusLabel(project.status)}</span>
-                      </span>
-                    </button>
-                  `
-                )
-                .join("")}
-            </div>
-          `
-        )
-        .join("")
-    : `<div class="empty-state">没有符合当前筛选的项目。</div>`;
+function renderMobileList() {
+  const visibleCategories = categories.map((category) => ({
+    ...category,
+    projects: category.projects.filter((project) => {
+      const haystack = `${project.name} ${categoryLabel(category.name)} ${project.summary} ${project.purpose} ${project.stack.join(" ")}`.toLowerCase();
+      return !searchTerm || haystack.includes(searchTerm);
+    })
+  })).filter((category) => category.projects.length);
+  mobileProjectList.innerHTML = visibleCategories.map((category) => {
+    const collapsed = collapsedCategories.has(category.name);
+    return `
+    <section class="mobile-category ${collapsed ? "collapsed" : ""}">
+      <button class="category-toggle" type="button" data-category-toggle="${category.name}" aria-expanded="${!collapsed}">
+        <span class="chevron">${collapsed ? "›" : "⌄"}</span><strong>${categoryLabel(category.name)}</strong><small>${category.projects.length}</small><span class="mobile-chevron">›</span>
+      </button>
+      <div class="mobile-items" ${collapsed ? "hidden" : ""}>
+        ${category.projects.map((project) => `
+          <button class="mobile-project-row ${project.id === selectedId ? "active" : ""}" type="button" data-project="${project.id}">
+            <span class="dot ${statusClass(project.status)}"></span>
+            <span class="mobile-project-name">${project.name}</span>
+            <small>${project.version}</small>
+          </button>`).join("")}
+      </div>
+    </section>`;
+  }).join("");
 }
 
 function renderDetail() {
@@ -465,28 +378,39 @@ function renderDetail() {
   document.querySelector("#detailCategory").textContent = categoryLabel(project.category);
   document.querySelector("#detailPurpose").textContent = project.purpose;
   document.querySelector("#detailUpdate").textContent = project.update;
+  document.querySelector("#detailNext").textContent = project.next;
   document.querySelector("#detailStatusDot").className = `dot ${statusClass(project.status)}`;
 
-  document.querySelector("#detailStack").innerHTML = project.stack.map((tag) => `<span>${tag}</span>`).join("");
+  document.querySelector("#detailStack").innerHTML = `<span>⌘</span> ${project.stack.join("  ·  ")}`;
 
   const [open] = project.links;
-  document.querySelector("#openLink").href = open;
+  const entrySection = document.querySelector("#entrySection");
+  entrySection.hidden = !open || open === "#";
+  if (open && open !== "#") document.querySelector("#openLink").href = open;
 
-  document.querySelector("#detailPreview").innerHTML = `
-    <span>待开发</span>
-  `;
 }
 
 function render() {
   renderNav();
-  renderShelf();
+  renderMobileList();
   renderDetail();
 }
 
 document.addEventListener("click", (event) => {
+  const categoryToggle = event.target.closest("[data-category-toggle]");
+  if (categoryToggle) {
+    const categoryName = categoryToggle.dataset.categoryToggle;
+    if (collapsedCategories.has(categoryName)) collapsedCategories.delete(categoryName);
+    else collapsedCategories.add(categoryName);
+    renderMobileList();
+    return;
+  }
+
   const projectButton = event.target.closest("[data-project]");
   if (projectButton) {
+    const isMobileProject = Boolean(projectButton.closest(".mobile-project-list"));
     selectedId = projectButton.dataset.project;
+    if (isMobileProject) document.body.classList.add("mobile-detail-open");
     render();
     return;
   }
@@ -495,13 +419,17 @@ document.addEventListener("click", (event) => {
   if (filterButton) {
     activeFilter = filterButton.dataset.filter;
     filterButtons.forEach((button) => button.classList.toggle("active", button === filterButton));
-    renderShelf();
+    renderMobileList();
   }
 });
 
 searchInput.addEventListener("input", (event) => {
   searchTerm = event.target.value.trim().toLowerCase();
-  renderShelf();
+  renderMobileList();
+});
+
+document.querySelector("#mobileBack").addEventListener("click", () => {
+  document.body.classList.remove("mobile-detail-open");
 });
 
 sidebarToggle.addEventListener("click", () => {

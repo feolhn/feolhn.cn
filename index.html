@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>feolhn.cn · 180k 实验室</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./styles.css?v=20260618-1" />
+    <link rel="stylesheet" href="./styles.css?v=20260815-1" />
   </head>
   <body>
     <div class="app-shell">
@@ -24,18 +24,11 @@
 
         <div class="nav-heading">
           <span>实验室系统</span>
-          <button class="icon-button" type="button" aria-label="命令面板">⌘</button>
         </div>
 
         <div class="sidebar-scroll">
           <nav id="projectNav" class="project-nav"></nav>
         </div>
-
-        <section class="lab-mode" aria-label="Lab mode">
-          <div class="mini-record" aria-hidden="true"><span></span></div>
-          <strong>策展模式</strong>
-          <p>整理、发布、复盘。让实验保持可见，让下一步保持明确。</p>
-        </section>
 
         <footer class="sidebar-footer">
           <button type="button" aria-label="设置">⚙</button>
@@ -59,45 +52,34 @@
           </div>
         </header>
 
-        <section class="shelf-panel" aria-labelledby="pageTitle">
-          <div class="shelf-titlebar">
-            <div>
-              <h1 id="pageTitle">唱片架</h1>
-              <p>整理 vibe coding、研究系统和 UI 实验项目。</p>
-            </div>
-            <div class="filters" role="group" aria-label="项目筛选">
-              <button class="filter active" type="button" data-filter="Featured">精选</button>
-              <button class="filter" type="button" data-filter="ThisMonth">本月更新</button>
-              <button class="filter" type="button" data-filter="LastMonth">上月更新</button>
-              <button class="filter" type="button" data-filter="Older">更久</button>
-            </div>
-          </div>
-
-          <div class="shelf-stage" aria-label="Project record shelf">
-            <div id="shelfRows" class="shelf-rows"></div>
-          </div>
-
-          <p class="shelf-tip">提示：选择一张项目唱片查看详情，入口链接保留在右侧面板。</p>
+        <section class="mobile-project-list" aria-labelledby="mobileListTitle">
+          <div class="mobile-list-heading"><h1 id="mobileListTitle">所有项目</h1></div>
+          <div id="mobileProjectList"></div>
         </section>
       </main>
 
-      <aside class="inspector" aria-label="Project inspector">
-        <div class="inspector-card">
-          <div class="project-kicker">
-            <span id="detailStatusDot"></span>
-            <span id="detailStatus"></span>
-            <span id="detailCategory"></span>
+      <aside class="inspector" aria-label="Project detail">
+        <div class="inspector-card" id="detailView">
+          <button class="mobile-back" id="mobileBack" type="button">‹ 所有项目</button>
+          <div class="detail-heading">
+            <div class="project-kicker">
+              <span id="detailStatusDot"></span>
+              <span id="detailStatus"></span>
+              <span id="detailCategory"></span>
+            </div>
+            <h2 id="detailTitle"></h2>
+            <div id="detailStack" class="detail-meta"></div>
           </div>
-          <h2 id="detailTitle"></h2>
+
+          <section class="entry-section" id="entrySection">
+            <div class="entry-links">
+              <a id="openLink" href="#" target="_blank" rel="noreferrer">打开项目</a>
+            </div>
+          </section>
 
           <section>
             <h3>用途</h3>
             <p id="detailPurpose"></p>
-          </section>
-
-          <section>
-            <h3>技术栈</h3>
-            <div id="detailStack" class="tag-list"></div>
           </section>
 
           <section>
@@ -106,20 +88,14 @@
           </section>
 
           <section>
-            <h3>入口链接</h3>
-            <div class="entry-links">
-              <a id="openLink" href="#" target="_blank" rel="noreferrer">打开项目</a>
-            </div>
+            <h3>下一步</h3>
+            <p id="detailNext"></p>
           </section>
 
-          <section>
-            <h3>预览</h3>
-            <div id="detailPreview" class="preview-card"></div>
-          </section>
         </div>
       </aside>
     </div>
 
-    <script src="./script.js?v=20260618-1"></script>
+    <script src="./script.js?v=20260815-1"></script>
   </body>
 </html>

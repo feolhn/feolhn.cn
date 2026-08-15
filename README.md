@@ -12,3 +12,7 @@ Static personal lab dashboard for collecting vibe coding, research, and UI exper
 ## Deploy
 
 This project is plain static HTML/CSS/JS and can be deployed directly to Cloudflare Pages.
+
+## Privacy
+
+Do not expose local filesystem paths, usernames, credentials, tokens, private data, or other sensitive information in the UI, source data, or published output.
