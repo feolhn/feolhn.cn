@@ -226,6 +226,19 @@ const categories = [
         cover: 19
       },
       {
+        id: "shanghai-apartment",
+        name: "上海长租公寓地图",
+        status: "Active",
+        version: "v0.1",
+        summary: "公寓房源信息与地图查询工具",
+        purpose: "以高德地图为交互底图，加载 apartments.csv 房源数据，支持按租金、房型、区域、品牌和关键词筛选，并查看公寓位置与详情。",
+        stack: ["HTML/CSS/JavaScript", "高德地图 API", "CSV 数据", "Cloudflare Pages"],
+        update: "已上线 apartment.feolhn.cn；项目采用原生前端与高德地图 JS API，房源数据维护在 apartments.csv，坐标由脚本生成与补齐。",
+        next: "持续补充房源数据与坐标，完善筛选和房源详情信息。",
+        links: ["https://apartment.feolhn.cn/"],
+        cover: 22
+      },
+      {
         id: "180k-tencent-meeting-notes",
         name: "180k-腾讯会议纪要",
         status: "Active",
