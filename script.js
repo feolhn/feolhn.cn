@@ -242,11 +242,11 @@ const categories = [
         id: "180k-tencent-meeting-notes",
         name: "180k-腾讯会议纪要",
         status: "Active",
-        version: "7份",
+        version: "9份",
         summary: "集中访问腾讯会议纪要",
         purpose: "把 180k 文件夹中的腾讯会议纪要集中整理，方便按会议时间快速打开原文。",
         stack: ["腾讯会议", "纪要", "云端链接"],
-        update: "已整理 7 份腾讯会议-元宝纪要，并接入永久公开分享链接。",
+        update: "已整理 9 份腾讯会议-元宝纪要，并接入永久密码分享链接。",
         next: "后续新增会议纪要时，继续按文件名和会议时间补充到此合集。",
         links: [],
         resources: [
@@ -256,7 +256,9 @@ const categories = [
           { date: "2026-08-10 21:40", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议把信息聚合推进到 Feed 产品设计：设定时间窗口和评分体系，结合上下文加载、标签过滤、缓存与人工 Review，评估信息和用户的真实价值。", delta: "将信息框架落到自动化 Feed、上下文策略、缓存与价值评估", url: "https://cloud.huozi.app/p/aw6czgvx4x" },
           { date: "2026-08-10 22:31", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议将讨论扩展到 AI 工具的价值模式与数据基础设施：通过封装 API 和搜索降低使用门槛，同时持续生产 TMTB 亚洲版内容，并研究无头浏览器取数。", delta: "新增工具产品付费模式、内容生产计划与外部数据获取方案", url: "https://cloud.huozi.app/p/zhern5vnwe" },
           { date: "2026-08-14 18:29", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议主题转向金融 AI 模型评测，明确榜单不追求通用数学能力，而是评估降噪、循证叙事、金融知识与判断等真实决策能力，并开始设计题型。", delta: "从信息产品建设转向金融模型能力评测，并建立具体能力维度", url: "https://cloud.huozi.app/p/28vn7vem2q" },
-          { date: "2026-08-14 19:09", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议进一步把模型评测具体化为三种信息环境：无额外数据、提供特定数据源、对比模型形成榜单，并计划用 20 道题目刻画模型的能力边界。", delta: "新增三种评测场景、20 道题目和明确的项目推进分工", url: "https://cloud.huozi.app/p/qvg79s2yja" }
+          { date: "2026-08-14 19:09", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议进一步把模型评测具体化为三种信息环境：无额外数据、提供特定数据源、对比模型形成榜单，并计划用 20 道题目刻画模型的能力边界。", delta: "新增三种评测场景、20 道题目和明确的项目推进分工", url: "https://cloud.huozi.app/p/qvg79s2yja" },
+          { date: "2026-08-22 20:01", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议围绕金融榜单评测方案展开，明确题型结构、工具使用与降噪类题目的出题方向，并计划在题目达到 20 多道后进行首轮集中测试。", delta: "从评测场景设计推进到题库结构、工具使用与降噪题型的具体出题计划", url: "https://cloud.huozi.app/p/aftmu4khpa" },
+          { date: "2026-08-22 20:48", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议进一步讨论动态环境下的评测框架，将题目拆分为计算题与叙事题，并规划 API 调用、历史上下文、日志结构化和产品化落地。", delta: "新增动态环境评测、计算题与叙事题拆分，以及 API 与日志结构化方案", url: "https://cloud.huozi.app/p/rwkhvfkn8c" }
         ],
         cover: 20
       }
