@@ -873,14 +873,16 @@ h1 {
 .entry-links a { display: inline-grid; width: max-content; min-height: 44px; padding: 0 20px; border: 0; border-radius: 9px; background: #f15e4c; color: #fff; box-shadow: none; font-size: 14px; }
 .entry-section.entry-collection .entry-label { margin: 0 0 8px; color: var(--muted); font-size: 12px; font-weight: 700; }
 .resource-links { gap: 6px; }
-.resource-links a { display: flex; align-items: flex-start; justify-content: space-between; width: 100%; min-height: 82px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 8px; background: color-mix(in srgb, var(--panel-strong) 82%, transparent); color: var(--ink); box-shadow: none; font-size: 12px; font-weight: 500; }
+.resource-links a { display: flex; align-items: flex-start; justify-content: space-between; width: 100%; min-height: 104px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 8px; background: color-mix(in srgb, var(--panel-strong) 82%, transparent); color: var(--ink); box-shadow: none; font-size: 14px; font-weight: 500; }
 .resource-links a:hover { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, var(--panel-strong)); color: var(--ink); }
 .resource-copy { display: grid; gap: 3px; min-width: 0; }
-.resource-copy strong { font-size: 13px; font-weight: 650; }
+.resource-copy strong { font-size: 15px; font-weight: 650; }
 .resource-tags { display: flex; flex-wrap: wrap; gap: 4px; margin: 1px 0 2px; }
-.resource-tags small { border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--panel) 80%, var(--bg)); color: var(--muted); font-size: 10px; line-height: 1.4; padding: 2px 6px; }
-.resource-copy em { color: var(--muted); font-size: 12px; font-style: normal; line-height: 1.45; }
-.resource-delta { color: var(--accent); font-size: 11px; font-weight: 700; line-height: 1.4; }
+.resource-tags small { border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--panel) 80%, var(--bg)); color: var(--muted); font-size: 11px; line-height: 1.4; padding: 2px 7px; }
+.resource-copy em { color: var(--muted); font-size: 14px; font-style: normal; line-height: 1.55; }
+.resource-delta { color: var(--accent); font-size: 13px; font-weight: 700; line-height: 1.45; }
+.resource-topic { margin: 22px 0 8px; color: var(--muted); font-size: 13px; font-weight: 700; letter-spacing: .02em; }
+.resource-topic:first-child { margin-top: 0; }
 .resource-arrow { flex: 0 0 auto; margin-left: 10px; color: var(--muted); font-size: 15px; }
 .mobile-back { display: none; }
 
@@ -927,7 +929,11 @@ body { scrollbar-width: none; }
   .entry-section.entry-collection { width: 100%; }
   .entry-section.entry-collection .entry-label { font-size: 17px; margin-bottom: 12px; color: var(--ink); }
   .entry-links a { display: flex; width: 100%; min-height: 48px; align-items: center; justify-content: center; border-radius: 9px; background: #f15e4c; color: #fff; font-size: 15px; }
-  .resource-links a { min-height: 82px; justify-content: space-between; padding: 10px 12px; border-radius: 7px; background: color-mix(in srgb, var(--panel-strong) 82%, transparent); color: var(--ink); font-size: 12px; }
+  .resource-links a { min-height: 104px; justify-content: space-between; padding: 14px 12px; border-radius: 7px; background: color-mix(in srgb, var(--panel-strong) 82%, transparent); color: var(--ink); font-size: 14px; }
+  .resource-copy strong { font-size: 15px; }
+  .resource-copy em { font-size: 14px; line-height: 1.55; }
+  .resource-delta { font-size: 13px; }
+  .resource-topic { margin-top: 20px; font-size: 14px; }
   .inspector section { padding: 24px 0; }
   .inspector h3 { font-size: 17px; margin-bottom: 12px; }
   .inspector p { font-size: 14px; line-height: 1.65; }

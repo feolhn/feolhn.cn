@@ -250,17 +250,18 @@ const categories = [
         next: "后续新增会议纪要时，继续按文件名和会议时间补充到此合集。",
         links: [],
         resources: [
-          { date: "2026-06-30 20:40", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议确定 AI 信息总结产品的基本方向：整合多来源信息，降低用户处理成本，并以“有用”为首要验证标准。商业上倾向围绕单个股票或行业订阅，产品形态强调统一、简洁和可对比。", url: "https://cloud.huozi.app/p/u8q7fkcjs3" },
-          { date: "2026-06-30 21:23", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议转向产品的商业化与市场路径，讨论 AI 总结服务如何建立用户习惯、沉淀为付费知识资产，并规划 TMTB 亚洲版及 Wiki 式延伸产品。", delta: "新增商业模式、竞品分析、产品规划与投资人沟通", url: "https://cloud.huozi.app/p/x3a3tt97jj" },
-          { date: "2026-08-10 21:09", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议进一步提出 X 信息聚合框架：先用用户关系网组织 thread，再用 AI 语义标签聚合成 event，并通过关键词、小模型和 AI 打分过滤噪声。", delta: "转入 X 框架的关系网、语义聚合、去噪与成本控制设计", url: "https://cloud.huozi.app/p/q279axuy9e" },
-          { date: "2026-08-10 21:40", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议把信息聚合推进到 Feed 产品设计：设定时间窗口和评分体系，结合上下文加载、标签过滤、缓存与人工 Review，评估信息和用户的真实价值。", delta: "将信息框架落到自动化 Feed、上下文策略、缓存与价值评估", url: "https://cloud.huozi.app/p/aw6czgvx4x" },
-          { date: "2026-08-10 22:31", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议将讨论扩展到 AI 工具的价值模式与数据基础设施：通过封装 API 和搜索降低使用门槛，同时持续生产 TMTB 亚洲版内容，并研究无头浏览器取数。", delta: "新增工具产品付费模式、内容生产计划与外部数据获取方案", url: "https://cloud.huozi.app/p/zhern5vnwe" },
-          { date: "2026-08-14 18:29", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议主题转向金融 AI 模型评测，明确榜单不追求通用数学能力，而是评估降噪、循证叙事、金融知识与判断等真实决策能力，并开始设计题型。", delta: "从信息产品建设转向金融模型能力评测，并建立具体能力维度", url: "https://cloud.huozi.app/p/28vn7vem2q" },
-          { date: "2026-08-14 19:09", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议进一步把模型评测具体化为三种信息环境：无额外数据、提供特定数据源、对比模型形成榜单，并计划用 20 道题目刻画模型的能力边界。", delta: "新增三种评测场景、20 道题目和明确的项目推进分工", url: "https://cloud.huozi.app/p/qvg79s2yja" },
-          { date: "2026-08-22 20:01", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议围绕金融榜单评测方案展开，明确题型结构、工具使用与降噪类题目的出题方向，并计划在题目达到 20 多道后进行首轮集中测试。", delta: "从评测场景设计推进到题库结构、工具使用与降噪题型的具体出题计划", url: "https://cloud.huozi.app/p/aftmu4khpa" },
-          { date: "2026-08-22 20:48", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议进一步讨论动态环境下的评测框架，将题目拆分为计算题与叙事题，并规划 API 调用、历史上下文、日志结构化和产品化落地。", delta: "新增动态环境评测、计算题与叙事题拆分，以及 API 与日志结构化方案", url: "https://cloud.huozi.app/p/rwkhvfkn8c" },
-          { date: "2026-08-27 20:58", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议探讨 AI 会议纪要系统的架构，以 Live 为核心组织 Entity、Fact、Speak Turn、Section 和 Summary，并规划 Agent 异步处理、云端部署、多源采集与行业工作台演进。", delta: "从评测工作台推进到会议纪要系统：新增 Live 数据范式、对象层级、Agent 异步链路与云端部署", url: "https://cloud.huozi.app/p/k52sqcwkwp" },
-          { date: "2026-08-27 21:42", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议进一步讨论云端 Agent 运行时与 DeepSeek Harness，将 Cloudflare Workers/Durable Objects 用于权限隔离、动态上下文、多任务工作台及金融数据接入。", delta: "新增企业权限隔离、Worker/DO 运行时、DeepSeek Harness 工作台与动态数据接入方案", url: "https://cloud.huozi.app/p/jjgvapzqdk" }
+          { date: "2026-06-30 20:40", topic: "AI 信息产品", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议确定 AI 信息总结产品的基本方向：整合多来源信息，降低用户处理成本，并以“有用”为首要验证标准。商业上倾向围绕单个股票或行业订阅，产品形态强调统一、简洁和可对比。", url: "https://cloud.huozi.app/p/u8q7fkcjs3" },
+          { date: "2026-06-30 21:23", topic: "AI 信息产品", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议转向产品的商业化与市场路径，讨论 AI 总结服务如何建立用户习惯、沉淀为付费知识资产，并规划 TMTB 亚洲版及 Wiki 式延伸产品。", delta: "新增商业模式、竞品分析、产品规划与投资人沟通", url: "https://cloud.huozi.app/p/x3a3tt97jj" },
+          { date: "2026-08-10 21:09", topic: "信息聚合与工具", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议进一步提出 X 信息聚合框架：先用用户关系网组织 thread，再用 AI 语义标签聚合成 event，并通过关键词、小模型和 AI 打分过滤噪声。", delta: "转入 X 框架的关系网、语义聚合、去噪与成本控制设计", url: "https://cloud.huozi.app/p/q279axuy9e" },
+          { date: "2026-08-10 21:40", topic: "信息聚合与工具", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议把信息聚合推进到 Feed 产品设计：设定时间窗口和评分体系，结合上下文加载、标签过滤、缓存与人工 Review，评估信息和用户的真实价值。", delta: "将信息框架落到自动化 Feed、上下文策略、缓存与价值评估", url: "https://cloud.huozi.app/p/aw6czgvx4x" },
+          { date: "2026-08-10 22:31", topic: "信息聚合与工具", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议将讨论扩展到 AI 工具的价值模式与数据基础设施：通过封装 API 和搜索降低使用门槛，同时持续生产 TMTB 亚洲版内容，并研究无头浏览器取数。", delta: "新增工具产品付费模式、内容生产计划与外部数据获取方案", url: "https://cloud.huozi.app/p/zhern5vnwe" },
+          { date: "2026-08-14 18:29", topic: "金融 AI 评测", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议主题转向金融 AI 模型评测，明确榜单不追求通用数学能力，而是评估降噪、循证叙事、金融知识与判断等真实决策能力，并开始设计题型。", delta: "从信息产品建设转向金融模型能力评测，并建立具体能力维度", url: "https://cloud.huozi.app/p/28vn7vem2q" },
+          { date: "2026-08-14 19:09", topic: "金融 AI 评测", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议进一步把模型评测具体化为三种信息环境：无额外数据、提供特定数据源、对比模型形成榜单，并计划用 20 道题目刻画模型的能力边界。", delta: "新增三种评测场景、20 道题目和明确的项目推进分工", url: "https://cloud.huozi.app/p/qvg79s2yja" },
+          { date: "2026-08-22 20:01", topic: "金融 AI 评测", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议围绕金融榜单评测方案展开，明确题型结构、工具使用与降噪类题目的出题方向，并计划在题目达到 20 多道后进行首轮集中测试。", delta: "从评测场景设计推进到题库结构、工具使用与降噪题型的具体出题计划", url: "https://cloud.huozi.app/p/aftmu4khpa" },
+          { date: "2026-08-22 20:48", topic: "金融 AI 评测", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议进一步讨论动态环境下的评测框架，将题目拆分为计算题与叙事题，并规划 API 调用、历史上下文、日志结构化和产品化落地。", delta: "新增动态环境评测、计算题与叙事题拆分，以及 API 与日志结构化方案", url: "https://cloud.huozi.app/p/rwkhvfkn8c" },
+          { date: "2026-08-25 20:41", topic: "AI 电话会系统", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议围绕实时会议纪要产品的架构优化展开，确立基于 Agent 的三层笔记体系与分步跑通策略，并明确前端渲染与接口对接的分工。", delta: "从金融评测推进到 AI 电话会系统：新增逐字稿、段落总结、亮点提取与三步处理流水线", url: "https://cloud.huozi.app/p/s2ryygbr9e" },
+          { date: "2026-08-27 20:58", topic: "AI 电话会系统", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议探讨 AI 会议纪要系统的架构，以 Live 为核心组织 Entity、Fact、Speak Turn、Section 和 Summary，并规划 Agent 异步处理、云端部署、多源采集与行业工作台演进。", delta: "进一步扩展 AI 电话会系统：新增 Live 数据范式、对象层级、Agent 异步链路与云端部署", url: "https://cloud.huozi.app/p/k52sqcwkwp" },
+          { date: "2026-08-27 21:42", topic: "AI 电话会系统", participants: ["DC", "K", "Alex（胡嘉伟）"], summary: "会议进一步讨论云端 Agent 运行时与 DeepSeek Harness，将 Cloudflare Workers/Durable Objects 用于权限隔离、动态上下文、多任务工作台及金融数据接入。", delta: "新增企业权限隔离、Worker/DO 运行时、DeepSeek Harness 工作台与动态数据接入方案", url: "https://cloud.huozi.app/p/jjgvapzqdk" }
         ],
         cover: 20
       }
@@ -438,7 +439,8 @@ function renderDetail() {
     entrySection.innerHTML = `
       <h3 class="entry-label">会议纪要</h3>
       <div class="entry-links resource-links">
-        ${resources.map((resource) => `
+        ${resources.map((resource, index) => `
+          ${resource.topic && (index === 0 || resource.topic !== resources[index - 1].topic) ? `<h4 class="resource-topic">${resource.topic}</h4>` : ""}
           <a href="${resource.url}" target="_blank" rel="noreferrer">
             <span class="resource-copy"><strong>${formatMeetingDate(resource.date)}</strong><span class="resource-tags">${resource.participants.map((participant) => `<small>${participant}</small>`).join("")}</span><em>${resource.summary}</em>${resource.delta ? `<span class="resource-delta">较上一场新增：${resource.delta}</span>` : ""}</span>
             <span class="resource-arrow">↗</span>
