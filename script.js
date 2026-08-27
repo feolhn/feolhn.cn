@@ -242,11 +242,11 @@ const categories = [
         id: "180k-tencent-meeting-notes",
         name: "180k-腾讯会议纪要",
         status: "Active",
-        version: "9份",
+        version: "11份",
         summary: "集中访问腾讯会议纪要",
         purpose: "把 180k 文件夹中的腾讯会议纪要集中整理，方便按会议时间快速打开原文。",
         stack: ["腾讯会议", "纪要", "云端链接"],
-        update: "已整理 9 份腾讯会议-元宝纪要，并接入永久密码分享链接。",
+        update: "已整理 11 份腾讯会议-元宝纪要，并接入永久密码分享链接。",
         next: "后续新增会议纪要时，继续按文件名和会议时间补充到此合集。",
         links: [],
         resources: [
@@ -258,7 +258,9 @@ const categories = [
           { date: "2026-08-14 18:29", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议主题转向金融 AI 模型评测，明确榜单不追求通用数学能力，而是评估降噪、循证叙事、金融知识与判断等真实决策能力，并开始设计题型。", delta: "从信息产品建设转向金融模型能力评测，并建立具体能力维度", url: "https://cloud.huozi.app/p/28vn7vem2q" },
           { date: "2026-08-14 19:09", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议进一步把模型评测具体化为三种信息环境：无额外数据、提供特定数据源、对比模型形成榜单，并计划用 20 道题目刻画模型的能力边界。", delta: "新增三种评测场景、20 道题目和明确的项目推进分工", url: "https://cloud.huozi.app/p/qvg79s2yja" },
           { date: "2026-08-22 20:01", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议围绕金融榜单评测方案展开，明确题型结构、工具使用与降噪类题目的出题方向，并计划在题目达到 20 多道后进行首轮集中测试。", delta: "从评测场景设计推进到题库结构、工具使用与降噪题型的具体出题计划", url: "https://cloud.huozi.app/p/aftmu4khpa" },
-          { date: "2026-08-22 20:48", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议进一步讨论动态环境下的评测框架，将题目拆分为计算题与叙事题，并规划 API 调用、历史上下文、日志结构化和产品化落地。", delta: "新增动态环境评测、计算题与叙事题拆分，以及 API 与日志结构化方案", url: "https://cloud.huozi.app/p/rwkhvfkn8c" }
+          { date: "2026-08-22 20:48", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议进一步讨论动态环境下的评测框架，将题目拆分为计算题与叙事题，并规划 API 调用、历史上下文、日志结构化和产品化落地。", delta: "新增动态环境评测、计算题与叙事题拆分，以及 API 与日志结构化方案", url: "https://cloud.huozi.app/p/rwkhvfkn8c" },
+          { date: "2026-08-27 20:58", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议探讨 AI 会议纪要系统的架构，以 Live 为核心组织 Entity、Fact、Speak Turn、Section 和 Summary，并规划 Agent 异步处理、云端部署、多源采集与行业工作台演进。", delta: "从评测工作台推进到会议纪要系统：新增 Live 数据范式、对象层级、Agent 异步链路与云端部署", url: "https://cloud.huozi.app/p/k52sqcwkwp" },
+          { date: "2026-08-27 21:42", participants: ["DC", "K", "Alex（胡嘉伟）", "李鑫"], summary: "会议进一步讨论云端 Agent 运行时与 DeepSeek Harness，将 Cloudflare Workers/Durable Objects 用于权限隔离、动态上下文、多任务工作台及金融数据接入。", delta: "新增企业权限隔离、Worker/DO 运行时、DeepSeek Harness 工作台与动态数据接入方案", url: "https://cloud.huozi.app/p/jjgvapzqdk" }
         ],
         cover: 20
       }
