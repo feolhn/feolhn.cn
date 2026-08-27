@@ -881,7 +881,7 @@ h1 {
 .resource-tags small { border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--panel) 80%, var(--bg)); color: var(--muted); font-size: 11px; line-height: 1.4; padding: 2px 7px; }
 .resource-copy em { color: var(--muted); font-size: 14px; font-style: normal; line-height: 1.55; }
 .resource-delta { color: var(--accent); font-size: 13px; font-weight: 700; line-height: 1.45; }
-.resource-topic { margin: 22px 0 8px; color: var(--muted); font-size: 13px; font-weight: 700; letter-spacing: .02em; }
+.resource-topic { margin: 22px 0 8px; color: var(--ink); font-size: 16px; font-weight: 700; letter-spacing: -.01em; }
 .resource-topic:first-child { margin-top: 0; }
 .resource-arrow { flex: 0 0 auto; margin-left: 10px; color: var(--muted); font-size: 15px; }
 .mobile-back { display: none; }
@@ -933,7 +933,7 @@ body { scrollbar-width: none; }
   .resource-copy strong { font-size: 15px; }
   .resource-copy em { font-size: 14px; line-height: 1.55; }
   .resource-delta { font-size: 13px; }
-  .resource-topic { margin-top: 20px; font-size: 14px; }
+  .resource-topic { margin-top: 20px; font-size: 17px; }
   .inspector section { padding: 24px 0; }
   .inspector h3 { font-size: 17px; margin-bottom: 12px; }
   .inspector p { font-size: 14px; line-height: 1.65; }
